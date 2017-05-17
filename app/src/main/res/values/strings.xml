@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ParentalControl</string>
+    <string name="main_statistics">Home</string>
+    <string name="main_control">Dashboard</string>
+    <string name="main_cion">Notifications</string>
+    <string name="login_title">Login</string>
+    <string name="main_about">About</string>
+    <string name="main_childaccount">Kids Account</string>
+    <string name="main_consumptionplan">Budget Plan</string>
+    <string name="main_eyeshield">Eye Protection</string>
+    <string name="main_feedback">Feedback</string>
+    <string name="main_internet">Internet Setting</string>
+    <string name="login_forgetpwd">Forgot Password?</string>
+    <string name="login_register">Register Now</string>
+    <string name="net_internet_null">No Network</string>
+</resources>

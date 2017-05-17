@@ -1,0 +1,26 @@
+<resources>
+
+    <!--主页-->
+    <string name="app_name">家长控制</string>
+    <string name="main_statistics">行为统计</string>
+    <string name="main_control">远程控制</string>
+    <string name="main_cion">星币管理</string>
+    <string name="main_eyeshield">护眼设置</string>
+    <string name="main_childaccount">儿童账户</string>
+    <string name="main_internet">上网设置</string>
+    <string name="main_consumptionplan">消费计划</string>
+    <string name="main_about">关于</string>
+    <string name="main_feedback">反馈</string>
+
+    <!--登录-->
+    <string name="login_title">登录</string>
+    <string name="login_forgetpwd">忘记密码?</string>
+    <string name="login_register">立即注册</string>
+    <string name="login_email_null">请填写邮箱</string>
+    <string name="login_email_error">请输入有效邮箱</string>
+    <string name="login_pwd_null">请输入密码</string>
+
+
+    <!--网络部分-->
+    <string name="net_internet_null">当前无网络</string>
+</resources>

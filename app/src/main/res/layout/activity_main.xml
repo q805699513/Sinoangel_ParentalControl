@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg"
+    android:fitsSystemWindows="false"
+    tools:openDrawer="start">
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#111"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="@dimen/sw600_260dp"
+            android:layout_height="@dimen/sw600_129dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/control_bg" />
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/sw600_10dp"
+            android:paddingRight="@dimen/sw600_10dp"
+            android:paddingTop="@dimen/sw600_20dp">
+
+            <ImageView
+                android:layout_width="@dimen/sw600_80dp"
+                android:layout_height="@dimen/sw600_80dp"
+                android:layout_marginLeft="@dimen/sw600_20dp"
+                android:src="@mipmap/parentheader1" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/Main_Title_TextView"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="@dimen/sw600_80dp"
+                android:layout_height="@dimen/sw600_80dp"
+                android:padding="@dimen/sw600_15dp"
+                android:src="@mipmap/store" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rg_main_menu"
+            android:layout_below="@+id/ll_top" />
+
+
+        <RadioGroup
+            android:id="@+id/rg_main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rb_main_actionStatistics"
+                style="@style/RadioButton_Base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/draw_select_main_actionstatistics"
+                android:text="@string/main_statistics" />
+
+
+            <RadioButton
+                android:id="@+id/rb_main_remoteControl"
+                style="@style/RadioButton_Base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/draw_select_main_remotecontrol"
+                android:text="@string/main_control" />
+
+
+            <RadioButton
+                android:id="@+id/rb_main_moneyManage"
+                style="@style/RadioButton_Base"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/draw_select_main_moneymanage"
+                android:text="@string/main_cion" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

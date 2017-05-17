@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="RadioButton_Base">
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/sw600_20sp</item>
+        <item name="android:textColor">@color/sino_white_99</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextView_Base">
+        <item name="android:textSize">@dimen/sw600_20sp</item>
+        <item name="android:textColor">@color/sino_white_99</item>
+    </style>
+
+    <style name="Main_Title_TextView">
+        <item name="android:textSize">@dimen/sw600_35sp</item>
+        <item name="android:textColor">@color/sino_white_99</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/sw600_80dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Main_Menu_TextView">
+        <item name="android:textSize">@dimen/sw600_26sp</item>
+        <item name="android:textColor">@color/sino_white_99</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/sw600_80dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Main_Menu_Icon_ImageView">
+        <item name="android:layout_width">@dimen/sw600_80dp</item>
+        <item name="android:layout_height">@dimen/sw600_80dp</item>
+    </style>
+
+    <style name="App_Button_TextView">
+        <item name="android:textSize">@dimen/sw600_30sp</item>
+        <item name="android:textColor">@color/sino_white_99</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/sw600_20dp</item>
+        <item name="android:paddingBottom">@dimen/sw600_20dp</item>
+    </style>
+
+    <style name="App_EditView_Base">
+        <item name="android:textSize">@dimen/sw600_25sp</item>
+        <item name="android:textColor">@color/sino_white_99</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/sw600_70dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:paddingLeft">@dimen/sw600_10dp</item>
+    </style>
+
+</resources>

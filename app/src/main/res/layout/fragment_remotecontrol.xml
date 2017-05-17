@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/sw600_40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/sw600_15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/Main_Menu_Icon_ImageView"
+                    android:src="@mipmap/ic_main_eye" />
+
+                <ImageView
+                    style="@style/Main_Menu_Icon_ImageView"
+                    android:layout_marginTop="@dimen/sw600_30dp"
+                    android:src="@mipmap/ic_main_account" />
+
+                <ImageView
+                    style="@style/Main_Menu_Icon_ImageView"
+                    android:layout_marginTop="@dimen/sw600_30dp"
+                    android:src="@mipmap/ic_main_internet" />
+
+                <ImageView
+                    style="@style/Main_Menu_Icon_ImageView"
+                    android:layout_marginTop="@dimen/sw600_30dp"
+                    android:src="@mipmap/ic_main_pay" />
+
+                <ImageView
+                    style="@style/Main_Menu_Icon_ImageView"
+                    android:layout_marginTop="@dimen/sw600_30dp"
+                    android:src="@mipmap/ic_main_about" />
+
+                <ImageView
+                    style="@style/Main_Menu_Icon_ImageView"
+                    android:layout_marginTop="@dimen/sw600_30dp"
+                    android:src="@mipmap/ic_main_feedback" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/sw600_25dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Main_Menu_TextView"
+                    android:text="@string/main_eyeshield" />
+
+                <TextView
+                    style="@style/Main_Menu_TextView"
+                    android:layout_marginTop="@dimen/sw600_30dp"
+                    android:text="@string/main_childaccount" />
+
+                <TextView
+                    style="@style/Main_Menu_TextView"
+                    android:layout_marginTop="@dimen/sw600_30dp"
+                    android:text="@string/main_internet" />
+
+                <TextView
+                    style="@style/Main_Menu_TextView"
+                    android:layout_marginTop="@dimen/sw600_30dp"
+                    android:text="@string/main_consumptionplan" />
+
+                <TextView
+                    style="@style/Main_Menu_TextView"
+                    android:layout_marginTop="@dimen/sw600_30dp"
+                    android:text="@string/main_about" />
+
+                <TextView
+                    style="@style/Main_Menu_TextView"
+                    android:layout_marginTop="@dimen/sw600_30dp"
+                    android:text="@string/main_feedback" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/sw600_55dp"
+            android:paddingRight="@dimen/sw600_55dp"
+            android:paddingTop="@dimen/sw600_15dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/sw600_94dp"
+                android:background="@color/sino_white_11" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/sw600_109dp"
+                android:background="@color/sino_white_11" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/sw600_109dp"
+                android:background="@color/sino_white_11" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/sw600_109dp"
+                android:background="@color/sino_white_11" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/sw600_109dp"
+                android:background="@color/sino_white_11" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
