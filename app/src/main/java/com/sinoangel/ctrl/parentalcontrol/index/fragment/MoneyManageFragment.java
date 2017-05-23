@@ -1,4 +1,4 @@
-package com.sinoangel.ctrl.parentalcontrol.fragment;
+package com.sinoangel.ctrl.parentalcontrol.index.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.view.ViewGroup;
  * Created by Z on 2017/5/16.
  */
 
-public class ActionStatisticsFragment extends Fragment {
+public class MoneyManageFragment extends Fragment {
 
     private Context mContext;
 

@@ -6,6 +6,8 @@ import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.sinoangel.ctrl.parentalcontrol.R;
+import com.sinoangel.ctrl.parentalcontrol.utils.AppUtils;
+import com.umeng.analytics.MobclickAgent;
 
 
 /**
@@ -13,7 +15,7 @@ import com.sinoangel.ctrl.parentalcontrol.R;
  */
 public class BaseApplication extends Application {
 
-    public static BaseApplication instance;
+    private static BaseApplication instance;
 
     //谷歌统计
     private Tracker mTracker;
@@ -21,15 +23,15 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+        AppUtils.initWH(this);
+        MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
+        getDefaultTracker();
     }
 
     /**
      * 获取唯一的MarsApplication实例
      **/
     public static BaseApplication getInstance() {
-        if (instance == null) {
-            instance = new BaseApplication();
-        }
         return instance;
     }
 

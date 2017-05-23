@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background"
+        android:scaleType="fitXY"
+        android:background="#00ff00"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/sw600_450dp"
+        android:layout_height="@dimen/sw600_500dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/btn_bk_wilhte">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Main_Title_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sw600_50dp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/sw600_15dp"
+            android:paddingRight="@dimen/sw600_15dp"
+            android:textSize="@dimen/sw600_30sp" />
+
+        <TextView
+            android:id="@+id/btn_ok"
+            style="@style/App_Button_TextView"
+            android:layout_width="@dimen/sw600_80dp"
+            android:layout_height="@dimen/sw600_80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/sw600_15dp"
+            android:background="@drawable/btn_bk_wilhte_rang"
+            android:text="√" />
+    </RelativeLayout>
+</RelativeLayout>

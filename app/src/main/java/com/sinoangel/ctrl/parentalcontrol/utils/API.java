@@ -26,7 +26,7 @@ public class API {
     }
     public static final String NET_USER_LOGIN = API + "StoreUsers/login";//登录
     public static final String NET_USER_REGISTER = API + "StoreUsers/register";//注册
-
+    public static final String NET_FINDPWDBYEMAIL = API2 + "api/StoreUsers/reset/";//密码找回
     public static final String NET_USER_STORE = API2 + "store";//商店
 
     public static String getURL(String api, Map<String, String> hmss) {

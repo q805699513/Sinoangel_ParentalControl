@@ -17,6 +17,7 @@
         <item name="android:textColor">@color/sino_white_99</item>
     </style>
 
+    <!--topbar样式-->
     <style name="Main_Title_TextView">
         <item name="android:textSize">@dimen/sw600_35sp</item>
         <item name="android:textColor">@color/sino_white_99</item>
@@ -25,6 +26,7 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <!--首页菜单项-->
     <style name="Main_Menu_TextView">
         <item name="android:textSize">@dimen/sw600_26sp</item>
         <item name="android:textColor">@color/sino_white_99</item>
@@ -41,7 +43,7 @@
     <style name="App_Button_TextView">
         <item name="android:textSize">@dimen/sw600_30sp</item>
         <item name="android:textColor">@color/sino_white_99</item>
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">@dimen/sw600_450dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingTop">@dimen/sw600_20dp</item>
@@ -57,6 +59,39 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textCursorDrawable">@null</item>
         <item name="android:paddingLeft">@dimen/sw600_10dp</item>
+    </style>
+
+    <style name="App_ImageView_Back">
+        <item name="android:layout_width">@dimen/sw600_54dp</item>
+        <item name="android:layout_height">@dimen/sw600_80dp</item>
+        <item name="android:paddingRight">@dimen/sw600_15dp</item>
+        <item name="android:paddingLeft">@dimen/sw600_15dp</item>
+        <item name="android:paddingTop">@dimen/sw600_10dp</item>
+        <item name="android:paddingBottom">@dimen/sw600_10dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_marginTop">@dimen/sw600_20dp</item>
+        <item name="android:layout_marginLeft">@dimen/sw600_15dp</item>
+        <item name="android:src">@mipmap/back</item>
+
+    </style>
+
+
+    <!-- dialog样式 -->
+    <style name="App_Dialog" parent="@android:style/Theme.Dialog">
+        <!-- 设置全屏 -->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!-- 设置未浮动窗口 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 设置无边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置完全透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 设置屏幕变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 设置透明虚拟按键 -->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
     </style>
 
 </resources>

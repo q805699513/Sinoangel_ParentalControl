@@ -1,4 +1,4 @@
-package com.sinoangel.ctrl.parentalcontrol.fragment;
+package com.sinoangel.ctrl.parentalcontrol.index.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,18 +8,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.sinoangel.ctrl.parentalcontrol.R;
+
 /**
  * Created by Z on 2017/5/16.
  */
 
-public class MoneyManageFragment extends Fragment {
+public class RemoteControlFragment extends Fragment {
 
     private Context mContext;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+
+        View view = inflater.inflate(R.layout.fragment_remotecontrol, null);
+
+
+        return view;
     }
 
     @Override

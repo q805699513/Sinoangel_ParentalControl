@@ -9,8 +9,14 @@
         android:label="@string/app_name"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
+
+        <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="591c328c8630f5520e000dc8" />
+
         <activity
-            android:name=".MainActivity"
+            android:name=".index.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="userPortrait">
             <intent-filter>
@@ -19,11 +25,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".LoginActivity"
-            android:screenOrientation="userPortrait"
-            android:windowSoftInputMode="stateHidden" />
+            android:name=".account.LoginActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".account.RegisterActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".account.ForgetPWDActivity"
+            android:screenOrientation="userPortrait" />
+        <activity android:name=".account.SelectHeadActivity"></activity>
     </application>
 
 </manifest>

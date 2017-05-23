@@ -1,18 +1,10 @@
 package com.sinoangel.ctrl.parentalcontrol.utils;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.text.TextUtils;
-import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
@@ -21,11 +13,6 @@ import com.sinoangel.ctrl.parentalcontrol.BuildConfig;
 import com.sinoangel.ctrl.parentalcontrol.R;
 import com.sinoangel.ctrl.parentalcontrol.base.BaseApplication;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.lang.reflect.Method;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,6 +21,28 @@ import java.util.regex.Pattern;
  * Created by Administrator on 2016/8/24 0024.
  */
 public class AppUtils {
+
+    private static int wei, hei;
+
+
+    public static int getWei() {
+        if (wei == 0)
+            wei = SPUtils.getIntVar("wei");
+        return wei;
+    }
+
+    public static int getHei() {
+        if (hei == 0)
+            hei = SPUtils.getIntVar("hei");
+        return hei;
+    }
+
+    public static void initWH(Context context) {
+        wei = context.getResources().getDisplayMetrics().widthPixels;
+        hei = context.getResources().getDisplayMetrics().heightPixels;
+        SPUtils.putIntVar("wei", wei);
+        SPUtils.putIntVar("hei", hei);
+    }
 
     public static void showToast(String word) {
         Toast toast = Toast.makeText(BaseApplication.getInstance(), word, Toast.LENGTH_SHORT);
@@ -109,34 +118,6 @@ public class AppUtils {
             return Constant.LANGUAGE_KO;
         }
         return Constant.LANGUAGE_EN;
-    }
-
-
-    private static View.OnTouchListener vot = new View.OnTouchListener() {
-        @Override
-        public boolean onTouch(View v, MotionEvent event) {
-            //设置Animation
-            Animation animDwon = AnimationUtils.loadAnimation(BaseApplication.getInstance(), R.anim.btn_down);
-            Animation animUp = AnimationUtils.loadAnimation(BaseApplication.getInstance(), R.anim.btn_up);
-
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    v.startAnimation(animDwon);
-                    animDwon.setFillAfter(true);
-                    break;
-
-                case MotionEvent.ACTION_UP:
-                    v.startAnimation(animUp);
-                    animUp.setFillAfter(true);
-                    break;
-            }
-            return false;    //这时必须返回true，不然 MotionEvent.ACTION_UP 没效果
-        }
-    };
-
-
-    public static void setBtnAnmi(View v) {
-        v.setOnTouchListener(vot);
     }
 
     public static boolean hasEmoji(String content) {

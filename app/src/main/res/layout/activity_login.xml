@@ -4,6 +4,9 @@
     android:layout_height="match_parent"
     android:background="@mipmap/main_bg">
 
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/App_ImageView_Back" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -11,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/sw600_20dp"
         android:gravity="center"
-        android:text="@string/login_title" />
+        android:text="@string/login_tile" />
 
 
     <LinearLayout
@@ -86,7 +89,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/sw600_25dp"
             android:background="@drawable/btn_bk_wilhte"
-            android:text="@string/login_title" />
+            android:text="@string/login_tile" />
 
         <TextView
             android:id="@+id/btn_register"
