@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/App_ImageView_Back" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Main_Title_TextView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/sw600_20dp"
+        android:gravity="center"
+        android:text="@string/kidaccount_title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="@dimen/sw600_30dp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+</RelativeLayout>

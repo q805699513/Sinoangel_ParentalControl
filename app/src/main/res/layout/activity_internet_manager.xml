@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/App_ImageView_Back" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Main_Title_TextView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/sw600_20dp"
+        android:gravity="center"
+        android:text="@string/net_title" />
+
+    <!--<include-->
+    <!--layout="@layout/item_add_icon"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_marginTop="@dimen/sw600_30dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/tv_title" />-->
+
+    <RelativeLayout
+        android:id="@+id/rl_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="@dimen/sw600_30dp"
+        android:padding="@dimen/sw600_20dp">
+
+        <View
+            android:layout_width="@dimen/sw600_50dp"
+            android:layout_height="@dimen/sw600_50dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/add_internet" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/rl_box"
+        android:background="@color/sino_white_11" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/v_line" />
+
+</RelativeLayout>

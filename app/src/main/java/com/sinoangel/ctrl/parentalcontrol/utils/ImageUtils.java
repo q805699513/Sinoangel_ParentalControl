@@ -8,9 +8,12 @@ import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.renderscript.Type;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.sinoangel.ctrl.parentalcontrol.base.BaseApplication;
 
 /**
@@ -18,6 +21,12 @@ import com.sinoangel.ctrl.parentalcontrol.base.BaseApplication;
  */
 
 public class ImageUtils {
+
+    public static void showImgUrl(String url, ImageView iv) {
+        if (TextUtils.isEmpty(url))
+            return;
+        Glide.with(BaseApplication.getInstance()).load(url).dontAnimate().into(iv);
+    }
 
     public static Bitmap getBulrBit(Window window) {
         return blurBitmap(myShot(window), 3);
@@ -91,7 +100,7 @@ public class ImageUtils {
         Canvas canvas = new Canvas(bmp);
         Bitmap bitmap = view.getDrawingCache();
         if (bitmap != null && !bitmap.isRecycled())
-            canvas.drawBitmap(bitmap, new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight()), new Rect(0, 0, wei, hei), null);
+            canvas.drawBitmap(bitmap, new Rect(0, 50, bitmap.getWidth(), bitmap.getHeight()), new Rect(0, 0, wei, hei), null);
         // 销毁缓存信息
         view.destroyDrawingCache();
         return bmp;

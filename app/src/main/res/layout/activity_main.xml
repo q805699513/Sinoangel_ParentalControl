@@ -26,12 +26,12 @@
             android:paddingRight="@dimen/sw600_10dp"
             android:paddingTop="@dimen/sw600_20dp">
 
-            <ImageView
+            <com.sinoangel.ctrl.parentalcontrol.customview.CircleImageView
                 android:id="@+id/iv_head"
                 android:layout_width="@dimen/sw600_80dp"
                 android:layout_height="@dimen/sw600_80dp"
                 android:layout_marginLeft="@dimen/sw600_20dp"
-                android:src="@mipmap/parentheader1" />
+                android:src="@mipmap/icon_parent_1" />
 
             <TextView
                 android:id="@+id/tv_title"
@@ -40,58 +40,100 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:id="@+id/iv_shop"
                 android:layout_width="@dimen/sw600_80dp"
                 android:layout_height="@dimen/sw600_80dp"
                 android:padding="@dimen/sw600_15dp"
                 android:src="@mipmap/store" />
         </LinearLayout>
 
-        <FrameLayout
-            android:id="@+id/content_frame"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/rg_main_menu"
-            android:layout_below="@+id/ll_top" />
+            android:layout_height="@dimen/sw600_665dp"
+            android:layout_marginTop="@dimen/sw600_40dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_below="@+id/ll_top">
 
+            <fragment
+                android:id="@+id/fragment"
+                android:name="com.sinoangel.ctrl.parentalcontrol.index.fragment.RemoteControlFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </ScrollView>
 
-        <RadioGroup
-            android:id="@+id/rg_main_menu"
+        <LinearLayout
+            android:id="@+id/ll_main_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/sw600_10dp"
+            android:paddingTop="@dimen/sw600_10dp">
 
-
-            <RadioButton
-                android:id="@+id/rb_main_actionStatistics"
-                style="@style/RadioButton_Base"
+            <LinearLayout
+                android:id="@+id/ll_main_actionStatistics"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/draw_select_main_actionstatistics"
-                android:text="@string/main_statistics" />
+                android:gravity="center"
+                android:orientation="vertical">
 
+                <ImageView
+                    android:layout_width="@dimen/sw600_50dp"
+                    android:layout_height="@dimen/sw600_50dp"
+                    android:src="@mipmap/rb_statistics" />
 
-            <RadioButton
-                android:id="@+id/rb_main_remoteControl"
-                style="@style/RadioButton_Base"
+                <TextView
+
+                    style="@style/TextView_Base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_statistics" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/draw_select_main_remotecontrol"
-                android:text="@string/main_control" />
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/sw600_50dp"
+                    android:layout_height="@dimen/sw600_50dp"
+                    android:src="@mipmap/rb_control" />
+
+                <TextView
+                    android:id="@+id/rb_main_actionStatistics"
+                    style="@style/TextView_Base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_control" />
+            </LinearLayout>
 
 
-            <RadioButton
-                android:id="@+id/rb_main_moneyManage"
-                style="@style/RadioButton_Base"
+            <LinearLayout
+                android:id="@+id/ll_main_moneyManage"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/draw_select_main_moneymanage"
-                android:text="@string/main_cion" />
+                android:gravity="center"
+                android:orientation="vertical">
 
-        </RadioGroup>
+                <ImageView
+                    android:layout_width="@dimen/sw600_50dp"
+                    android:layout_height="@dimen/sw600_50dp"
+                    android:src="@mipmap/rb_cion" />
+
+                <TextView
+                    style="@style/TextView_Base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_class" />
+            </LinearLayout>
+
+        </LinearLayout>
     </RelativeLayout>
 
 

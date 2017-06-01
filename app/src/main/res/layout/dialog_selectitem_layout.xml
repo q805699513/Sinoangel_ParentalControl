@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="@dimen/sw600_450dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/btn_bk_wilhte">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/sw600_50dp"
+                android:paddingRight="@dimen/sw600_50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/sw600_50dp"
+                    android:layout_height="@dimen/sw600_50dp"
+                    android:src="@color/sino_white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unit_h" />
+            </LinearLayout>
+
+            <com.sinoangel.ctrl.parentalcontrol.customview.WheelView
+                android:id="@+id/wv_core"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btn_ok"
+            style="@style/App_Button_TextView"
+            android:layout_width="@dimen/sw600_80dp"
+            android:layout_height="@dimen/sw600_80dp"
+            android:layout_marginBottom="@dimen/sw600_15dp"
+            android:background="@drawable/btn_bk_wilhte_rang"
+            android:text="√" />
+
+    </LinearLayout>
+</RelativeLayout>

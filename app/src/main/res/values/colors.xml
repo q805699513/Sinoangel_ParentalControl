@@ -3,4 +3,5 @@
     <color name="sino_white">#fff</color>
     <color name="sino_white_11">#11ffffff</color>
     <color name="sino_white_99">#99ffffff</color>
+    <color name="sino_null">#00000000</color>
 </resources>

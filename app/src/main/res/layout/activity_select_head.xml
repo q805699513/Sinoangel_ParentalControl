@@ -25,7 +25,7 @@
         android:layout_below="@+id/tv_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/sw600_65dp"
-        android:src="@mipmap/parentheader2" />
+        android:src="@mipmap/icon_parent_1" />
 
     <LinearLayout
         android:id="@+id/pos1"
@@ -44,7 +44,7 @@
             android:id="@+id/iv_sele_head1"
             android:layout_width="@dimen/sw600_120dp"
             android:layout_height="@dimen/sw600_120dp"
-            android:src="@mipmap/parentheader1" />
+            android:src="@mipmap/icon_parent_1" />
 
         <View
             android:layout_width="0dp"
@@ -55,7 +55,7 @@
             android:id="@+id/iv_sele_head2"
             android:layout_width="@dimen/sw600_120dp"
             android:layout_height="@dimen/sw600_120dp"
-            android:src="@mipmap/parentheader2" />
+            android:src="@mipmap/icon_parent_2" />
 
         <View
             android:layout_width="0dp"
@@ -66,7 +66,7 @@
             android:id="@+id/iv_sele_head3"
             android:layout_width="@dimen/sw600_120dp"
             android:layout_height="@dimen/sw600_120dp"
-            android:src="@mipmap/parentheader3" />
+            android:src="@mipmap/icon_parent_3" />
 
         <View
             android:layout_width="0dp"
@@ -90,7 +90,7 @@
             android:id="@+id/iv_sele_head4"
             android:layout_width="@dimen/sw600_120dp"
             android:layout_height="@dimen/sw600_120dp"
-            android:src="@mipmap/parentheader4" />
+            android:src="@mipmap/icon_parent_4" />
 
         <View
             android:layout_width="0dp"
@@ -101,7 +101,7 @@
             android:id="@+id/iv_sele_head5"
             android:layout_width="@dimen/sw600_120dp"
             android:layout_height="@dimen/sw600_120dp"
-            android:src="@mipmap/parentheader5" />
+            android:src="@mipmap/icon_parent_5" />
 
         <View
             android:layout_width="0dp"
@@ -112,7 +112,7 @@
             android:id="@+id/iv_sele_head6"
             android:layout_width="@dimen/sw600_120dp"
             android:layout_height="@dimen/sw600_120dp"
-            android:src="@mipmap/parentheader6" />
+            android:src="@mipmap/icon_parent_6" />
 
         <View
             android:layout_width="0dp"

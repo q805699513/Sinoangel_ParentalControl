@@ -4,9 +4,9 @@
     android:layout_height="match_parent"
     android:background="@mipmap/main_bg">
 
-    <ImageView
-        android:id="@+id/iv_back"
-        style="@style/App_ImageView_Back" />
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_back"-->
+        <!--style="@style/App_ImageView_Back" />-->
 
     <TextView
         android:id="@+id/tv_title"
@@ -37,6 +37,7 @@
                 android:id="@+id/et_email"
                 style="@style/App_EditView_Base"
                 android:layout_marginLeft="@dimen/sw600_15dp"
+                android:maxLength="30"
                 android:inputType="textEmailAddress" />
 
         </LinearLayout>
@@ -62,6 +63,7 @@
                 android:id="@+id/et_pwd"
                 style="@style/App_EditView_Base"
                 android:layout_marginLeft="@dimen/sw600_15dp"
+                android:maxLength="18"
                 android:inputType="textPassword" />
 
         </LinearLayout>

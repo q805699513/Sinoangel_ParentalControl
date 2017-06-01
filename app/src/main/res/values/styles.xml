@@ -6,10 +6,10 @@
     </style>
 
     <style name="RadioButton_Base">
-        <item name="android:button">@null</item>
         <item name="android:textSize">@dimen/sw600_20sp</item>
         <item name="android:textColor">@color/sino_white_99</item>
         <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
     </style>
 
     <style name="TextView_Base">
@@ -36,8 +36,9 @@
     </style>
 
     <style name="Main_Menu_Icon_ImageView">
-        <item name="android:layout_width">@dimen/sw600_80dp</item>
-        <item name="android:layout_height">@dimen/sw600_80dp</item>
+        <item name="android:layout_width">@dimen/sw600_110dp</item>
+        <item name="android:layout_height">@dimen/sw600_110dp</item>
+        <item name="android:padding">@dimen/sw600_15dp</item>
     </style>
 
     <style name="App_Button_TextView">

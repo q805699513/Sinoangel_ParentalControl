@@ -7,12 +7,13 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.sinoangel.ctrl.parentalcontrol.R;
+import com.sinoangel.ctrl.parentalcontrol.base.BaseActivity;
 import com.sinoangel.ctrl.parentalcontrol.utils.AppUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.BtnAnmiUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.Constant;
 import com.sinoangel.ctrl.parentalcontrol.utils.StaticObjects;
 
-public class SelectHeadActivity extends AppCompatActivity implements View.OnClickListener {
+public class SelectHeadActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView iv_head, iv_sele_head1, iv_sele_head2, iv_sele_head3, iv_sele_head4, iv_sele_head5, iv_sele_head6;
     private View iv_back, btn_ok;
@@ -43,14 +44,15 @@ public class SelectHeadActivity extends AppCompatActivity implements View.OnClic
 
 
         //点击动画
-        new BtnAnmiUtils().setBtnAnmi(iv_back);
-        new BtnAnmiUtils().setBtnAnmi(btn_ok);
-        new BtnAnmiUtils().setBtnAnmi(iv_sele_head1);
-        new BtnAnmiUtils().setBtnAnmi(iv_sele_head2);
-        new BtnAnmiUtils().setBtnAnmi(iv_sele_head3);
-        new BtnAnmiUtils().setBtnAnmi(iv_sele_head4);
-        new BtnAnmiUtils().setBtnAnmi(iv_sele_head5);
-        new BtnAnmiUtils().setBtnAnmi(iv_sele_head6);
+        BtnAnmiUtils btnAnmiUtils = new BtnAnmiUtils();
+        btnAnmiUtils.setBtnAnmi(iv_back);
+        btnAnmiUtils.setBtnAnmi(btn_ok);
+        btnAnmiUtils.setBtnAnmi(iv_sele_head1);
+        btnAnmiUtils.setBtnAnmi(iv_sele_head2);
+        btnAnmiUtils.setBtnAnmi(iv_sele_head3);
+        btnAnmiUtils.setBtnAnmi(iv_sele_head4);
+        btnAnmiUtils.setBtnAnmi(iv_sele_head5);
+        btnAnmiUtils.setBtnAnmi(iv_sele_head6);
     }
 
     @Override
@@ -59,27 +61,27 @@ public class SelectHeadActivity extends AppCompatActivity implements View.OnClic
         switch (v.getId()) {
             case R.id.iv_sele_head1:
                 headId = 0;
-                iv_head.setImageResource(StaticObjects.HeadIdList[headId]);
+                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
                 break;
             case R.id.iv_sele_head2:
                 headId = 1;
-                iv_head.setImageResource(StaticObjects.HeadIdList[headId]);
+                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
                 break;
             case R.id.iv_sele_head3:
                 headId = 2;
-                iv_head.setImageResource(StaticObjects.HeadIdList[headId]);
+                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
                 break;
             case R.id.iv_sele_head4:
                 headId = 3;
-                iv_head.setImageResource(StaticObjects.HeadIdList[headId]);
+                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
                 break;
             case R.id.iv_sele_head5:
                 headId = 4;
-                iv_head.setImageResource(StaticObjects.HeadIdList[headId]);
+                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
                 break;
             case R.id.iv_sele_head6:
                 headId = 5;
-                iv_head.setImageResource(StaticObjects.HeadIdList[headId]);
+                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
                 break;
             case R.id.iv_back:
                 finish();

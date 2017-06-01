@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/App_ImageView_Back" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Main_Title_TextView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/sw600_20dp"
+        android:gravity="center"
+        android:text="@string/consume_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_id1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="@dimen/sw600_30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/sw600_15dp"
+        android:paddingLeft="@dimen/sw600_40dp"
+        android:paddingRight="@dimen/sw600_40dp"
+        android:paddingTop="@dimen/sw600_15dp">
+
+        <TextView
+            style="@style/Main_Menu_TextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/consume_enable_pay"
+            android:textSize="@dimen/sw600_30sp" />
+
+        <CheckBox
+            android:id="@+id/cb_allow_pay"
+            android:layout_width="@dimen/sw600_120dp"
+            android:layout_height="@dimen/sw600_72dp"
+            android:background="@drawable/cb_off_on"
+            android:button="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_id2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_id1"
+        android:layout_margin="@dimen/sw600_15dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_scoin"
+                android:layout_width="@dimen/sw600_180dp"
+                android:layout_height="@dimen/sw600_180dp"
+                android:src="@mipmap/consume_plan_limit" />
+
+            <TextView
+                style="@style/TextView_Base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sw600_10dp"
+                android:text="@string/consume_quota" />
+
+            <TextView
+                android:id="@+id/tv_sino_coin"
+                style="@style/TextView_Base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sw600_10dp"
+                android:text="100" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/sino_white_11" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_term"
+                android:layout_width="@dimen/sw600_180dp"
+                android:layout_height="@dimen/sw600_180dp"
+                android:src="@mipmap/consume_day_limit" />
+
+            <TextView
+                style="@style/TextView_Base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sw600_10dp"
+                android:text="@string/consume_payment_limit" />
+
+            <TextView
+                android:id="@+id/tv_term"
+                style="@style/TextView_Base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sw600_10dp"
+                android:text="15" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_id1"
+        style="@style/Main_Menu_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_id2"
+        android:layout_marginLeft="@dimen/sw600_50dp"
+        android:layout_marginTop="@dimen/sw600_30dp"
+        android:text="@string/consume_lab1" />
+
+    <TextView
+        android:id="@+id/tv_id2"
+        style="@style/Main_Menu_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_id1"
+        android:layout_marginLeft="@dimen/sw600_50dp"
+        android:layout_marginTop="@dimen/sw600_30dp"
+        android:text="@string/consume_lab2" />
+
+    <TextView
+        android:id="@+id/btn_save"
+        style="@style/App_Button_TextView"
+        android:layout_width="@dimen/sw600_450dp"
+        android:layout_below="@+id/tv_id2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/sw600_25dp"
+        android:background="@drawable/btn_bk_wilhte"
+        android:text="@string/btn_save" />
+</RelativeLayout>

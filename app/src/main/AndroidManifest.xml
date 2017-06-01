@@ -4,7 +4,7 @@
 
     <application
         android:name=".base.BaseApplication"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="false"
@@ -26,15 +26,56 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".account.LoginActivity"
+            android:name=".account.parent.LoginActivity"
             android:screenOrientation="userPortrait" />
         <activity
-            android:name=".account.RegisterActivity"
+            android:name=".account.parent.RegisterActivity"
             android:screenOrientation="userPortrait" />
         <activity
-            android:name=".account.ForgetPWDActivity"
+            android:name=".account.parent.ForgetPWDActivity"
             android:screenOrientation="userPortrait" />
-        <activity android:name=".account.SelectHeadActivity"></activity>
+        <activity
+            android:name=".account.SelectHeadActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".webview.ShopActivity"
+            android:launchMode="singleTop"
+            android:process=":remote"
+            android:screenOrientation="userLandscape" />
+        <activity
+            android:name=".index.EyeshieldSettingActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".index.KidAccountActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".index.InternetManagerActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".index.AddURLActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".index.ConsumeProtectionActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".index.AboutActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".index.FeedbackActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".index.ActionStatisticsActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".index.SinoCoinActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".account.parent.ParentAccountActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".account.kids.CreateKidActivity"
+            android:screenOrientation="userPortrait"></activity>
     </application>
 
 </manifest>

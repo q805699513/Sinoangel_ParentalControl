@@ -1,13 +1,19 @@
 package com.sinoangel.ctrl.parentalcontrol.base;
 
+import android.app.ActivityManager;
 import android.app.Application;
+import android.content.Context;
+import android.text.TextUtils;
 
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
+import com.sinoangel.ctrl.parentalcontrol.BuildConfig;
 import com.sinoangel.ctrl.parentalcontrol.R;
 import com.sinoangel.ctrl.parentalcontrol.utils.AppUtils;
 import com.umeng.analytics.MobclickAgent;
+
+import java.util.List;
 
 
 /**
@@ -23,7 +29,14 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
-        AppUtils.initWH(this);
+
+        String processName = getProcessName(this,
+                android.os.Process.myPid());
+        if (TextUtils.equals(BuildConfig.APPLICATION_ID, processName)) {
+            //主进程
+            AppUtils.initWH(this);
+        }
+
         MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
         getDefaultTracker();
     }
@@ -53,5 +66,19 @@ public class BaseApplication extends Application {
                 .setCategory(type)
                 .setAction(name)
                 .build());
+    }
+
+    public static String getProcessName(Context cxt, int pid) {
+        ActivityManager am = (ActivityManager) cxt.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> runningApps = am.getRunningAppProcesses();
+        if (runningApps == null) {
+            return null;
+        }
+        for (ActivityManager.RunningAppProcessInfo procInfo : runningApps) {
+            if (procInfo.pid == pid) {
+                return procInfo.processName;
+            }
+        }
+        return null;
     }
 }

@@ -5,10 +5,9 @@
 
     <ImageView
         android:id="@+id/background"
-        android:scaleType="fitXY"
-        android:background="#00ff00"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
 
     <RelativeLayout
         android:layout_width="@dimen/sw600_450dp"
@@ -37,5 +36,6 @@
             android:layout_marginBottom="@dimen/sw600_15dp"
             android:background="@drawable/btn_bk_wilhte_rang"
             android:text="√" />
+
     </RelativeLayout>
 </RelativeLayout>

@@ -1,31 +1,95 @@
 <resources>
-    <string name="app_name">ParentalControl</string>
-    <string name="main_statistics">Home</string>
-    <string name="main_control">Dashboard</string>
-    <string name="main_cion">Notifications</string>
-    <string name="login_tile">Login</string>
-    <string name="main_about">About</string>
-    <string name="main_childaccount">Kids Account</string>
-    <string name="main_consumptionplan">Budget Plan</string>
-    <string name="main_eyeshield">Eye Protection</string>
-    <string name="main_feedback">Feedback</string>
-    <string name="main_internet">Internet Setting</string>
-    <string name="login_forgetpwd">Forgot Password?</string>
-    <string name="login_register">Register Now</string>
-    <string name="net_internet_null">No Network</string>
-    <string name="login_email_no_verification">Please login after verifying account!</string>
-    <string name="login_email_null">null email</string>
-    <string name="login_pwd_null">null pwd</string>
-    <string name="login_email_error">email error</string>
-    <string name="login_pwdoraccount_error">Pwd Or Email Error</string>
-    <string name="login_title_forgetpwd">Forget Pwd</string>
-    <string name="login_continue">Continue</string>
-    <string name="login_input_reg_mail">Enter the registered mailbox</string>
-    <string name="register_title">Register</string>
-    <string name="register_fix_head">Modify Head</string>
-    <string name="btn_ok">Confirm</string>
-    <string name="btn_no">Cancel</string>
-    <string name="login_reset_pwd">" 密码重置邮件已发送，请及时查看邮箱"</string>
-    <string name="register_userName_error">用户名含非法字符</string>
+    <!--主页-->
+    <string name="app_name">家长控制</string>
+    <string name="main_statistics">行为统计</string>
+    <string name="main_control">远程控制</string>
+    <string name="main_class">课程表</string>
+
+    <!--登录注册等-->
+    <string name="login_tile">登录</string>
+    <string name="login_forgetpwd">忘记密码?</string>
+    <string name="login_register">立即注册</string>
+    <string name="login_email_null">请填写邮箱</string>
+    <string name="login_email_error">请输入有效邮箱</string>
+    <string name="login_pwd_null">请输入密码</string>
+    <string name="login_email_no_verification">请在验证账号后登录！</string>
+    <string name="login_pwdoraccount_error">邮箱或密码错误！</string>
+    <string name="login_title_forgetpwd">忘记密码</string>
+    <string name="login_continue">继续</string>
+    <string name="login_input_reg_mail">输入注册邮箱</string>
+    <string name="login_reset_pwd"> 密码重置邮件已发送，请及时查看邮箱</string>
+    <string name="register_title">注册</string>
+    <string name="register_fix_head">修改头像</string>
     <string name="register_userName_null">请填用户名</string>
+    <string name="register_userName_error">用户名含非法字符</string>
+    <string name="register_user_boy">男</string>
+    <string name="register_user_girl">女</string>
+    <string name="register_success">您会收到一封电子邮件，其中包含确认此电子邮件地址属于您本人的链接。</string>
+    <string name="register_email_repat">邮箱已被注册</string>
+    <string name="register_username_repat">用户名已被注册</string>
+
+    <!--护眼设置-->
+    <string name="eyeshield_title">护眼设置</string>
+    <string name="eyeshield_use_time">累计使用时间</string>
+    <string name="eyeshield_wait_time">休息时间</string>
+
+    <!--家长账户-->
+    <string name="parentaccount_title">家长账户</string>
+
+    <!--儿童账户-->
+    <string name="kidaccount_title">儿童账户</string>
+    <string name="kidaccount_add">添加儿童</string>
+    <string name="kidaccount_update">修改儿童</string>
+
+    <!--上网设置-->
+    <string name="net_title">上网设置</string>
+    <string name="net_add_url">添加网址</string>
+    <string name="net_url_name">网站名称</string>
+    <string name="net_url_path">网站地址</string>
+    <string name="net_url_name_null">请填写网址名称</string>
+    <string name="net_url_path_null">请填写网址</string>
+    <string name="net_url_path_error">网址格式有误</string>
+
+    <!--消费保护-->
+    <string name="consume_title">消费保护</string>
+    <string name="consume_enable_pay">允许孩子使用星币购买内容</string>
+    <string name="consume_quota">额度(星币)</string>
+    <string name="consume_payment_limit">账期(天)</string>
+    <string name="consume_lab1">这个设置可以防止孩子过度消费.</string>
+    <string name="consume_lab2">到下一个账期第一天自动自动恢复额度.</string>
+
+    <!--星币管理-->
+    <string name="sinocoin_title">星币管理</string>
+    <string name="sinocoin_remain">星币余额:</string>
+
+    <!--关于-->
+    <string name="abou_title">关于</string>
+
+    <!--反馈-->
+    <string name="feedback_title">反馈</string>
+    <string name="feedback_context_null">反馈内容不能为空</string>
+
+
+    <!--行为统计-->
+    <string name="actionstatistics_title">行为统计</string>
+
+    <!--button-->
+    <string name="btn_ok">确认</string>
+    <string name="btn_no">取消</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_update">修改</string>
+    <string name="btn_exit">退出</string>
+
+
+    <!--提示语-->
+    <string name="tag_net_null">当前无网络!</string>
+    <string name="tag_net_request_error">请求失败!</string>
+    <string name="tag_net_request_success">请求成功!</string>
+    <string name="tag_exit">确认退出吗?</string>
+    <string name="tag_delete">确认删除吗?</string>
+
+    <!--单位-->
+    <string name="unit_h">小时</string>
+    <string name="unit_d">天</string>
+    <string name="unit_coin">星币</string>
 </resources>
