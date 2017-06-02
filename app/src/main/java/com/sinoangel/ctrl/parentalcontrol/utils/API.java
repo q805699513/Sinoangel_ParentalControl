@@ -1,6 +1,5 @@
 package com.sinoangel.ctrl.parentalcontrol.utils;
 
-import com.sinoangel.ctrl.parentalcontrol.account.parent.bean.ParentBean;
 import com.sinoangel.ctrl.parentalcontrol.account.parent.bean.TokenBean;
 
 import java.util.HashMap;
@@ -12,8 +11,8 @@ import java.util.Set;
  */
 
 public class API {
-    public static String API = "http://cn.api.sinoangel.cn/";
-    public static String API2 = "http://shop.sinoangel.cn/";//商店
+    public static final String API = "http://cn.api.sinoangel.cn/";
+    public static final String API2 = "http://shop.sinoangel.cn/";//商店
 
     public static final String NET_USER_STORE = API2 + "home";//商店 store
 
@@ -29,6 +28,7 @@ public class API {
     public static final String NET_FINDKIDKIDS = API + "common/getUserChildInfo";//儿童列表
     public static final String NET_DELETEKIDS = API + "common/delUserChildInfo";//删除儿童
     public static final String NET_UPDATEKIDS = API + "common/SetUserChildInfo";//修改儿童
+    public static final String NET_ADDKIDS = API + "common/SetUserChildInfo";//添加儿童
 
     public static final String NET_WEB_LIST = API + "common/GetGreennetInfo";//获取网址列表
     public static final String NET_WEB_UPDATE = API + "common/SaveGreennetInfo";//修改网址
@@ -36,6 +36,8 @@ public class API {
     public static final String NET_WEB_DELETE = API + "common/DelGreennetInfo";//删除网址
 
     public static final String NET_LIMIT = API + "common/SetUserChildBuyLimit";//更新消费保护
+
+    public static final String NET_EYESHIELD = API + "common/setProtectEyes";//更新护眼设置
 
     public static final String NET_FEEDBACK = API + "common/setfeedack";//提交反馈
 
@@ -118,20 +120,24 @@ public class API {
     /**
      * 修改儿童
      */
-    public static String updateKid() {
-        Map<String, String> mss = new HashMap<>();
-//        mss.put("childId", uidb.getUserId());
+    public static String updateKid(Map<String, String> mss) {
         return getURL(NET_UPDATEKIDS, mss);
+    }
+
+    /**
+     * 添加儿童
+     */
+    public static String addKid(Map<String, String> mss) {
+        return getURL(NET_ADDKIDS, mss);
     }
 
     /**
      * 删除儿童
      */
-    public static String deleteKid() {
+    public static String deleteKid(String kidId) {
         Map<String, String> mss = new HashMap<>();
-        TokenBean.DataBean uidb = StaticObjects.getUidb();
-        if (uidb != null)
-            mss.put("userId", uidb.getUserId());
+        mss.put("childId", kidId);
+        mss.put("child", "2");
         return getURL(NET_DELETEKIDS, mss);
     }
 
@@ -237,9 +243,9 @@ public class API {
     }
 
     /**
-     * 更新消费保护
+     * 提交反馈
      */
-    public static String commitFeedback( String feedback) {
+    public static String commitFeedback(String feedback) {
         Map<String, String> mss = new HashMap<>();
         TokenBean.DataBean uidb = StaticObjects.getUidb();
         if (uidb != null)
@@ -249,4 +255,17 @@ public class API {
         return getURL(NET_FEEDBACK, mss);
     }
 
+    /**
+     * 更护眼设置
+     */
+    public static String updateEyeshieldSetting(String count, String once, String wait) {
+        Map<String, String> mss = new HashMap<>();
+        TokenBean.DataBean uidb = StaticObjects.getUidb();
+        if (uidb != null)
+            mss.put("userId", uidb.getUserId());
+        mss.put("day_total_useage_time", count);
+        mss.put("each_usage_time", once);
+        mss.put("break_time", wait);
+        return getURL(NET_EYESHIELD, mss);
+    }
 }

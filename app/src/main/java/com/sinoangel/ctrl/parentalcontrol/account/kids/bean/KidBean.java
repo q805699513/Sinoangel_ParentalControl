@@ -40,7 +40,7 @@ public class KidBean extends NetBean {
          */
 
         private String id;
-        private String owner_id;
+//        private String owner_id;//家长id
         private String nickname;
         private String first_lang;
         private String sex;
@@ -57,13 +57,13 @@ public class KidBean extends NetBean {
             this.id = id;
         }
 
-        public String getOwner_id() {
-            return owner_id;
-        }
-
-        public void setOwner_id(String owner_id) {
-            this.owner_id = owner_id;
-        }
+//        public String getOwner_id() {
+//            return owner_id;
+//        }
+//
+//        public void setOwner_id(String owner_id) {
+//            this.owner_id = owner_id;
+//        }
 
         public String getNickname() {
             return nickname;

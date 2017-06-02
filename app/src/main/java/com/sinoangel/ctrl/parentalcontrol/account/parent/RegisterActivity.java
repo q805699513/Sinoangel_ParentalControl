@@ -43,7 +43,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
     private int headId;//头像id
     private String sex;//0男孩 1 女孩
-    private String countryId;
+    private String countryId = "2";
     private ParentBean.DataBean.UserBean parent;//家长信息
     private List<Country.DataBean> countryArrayList;//国家列表
 
@@ -119,6 +119,9 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             else
                 rg_sex.check(R.id.rb_sex_girl);
             btn_register.setText(getString(R.string.btn_save));
+
+            countryId = parent.getCountry_id();
+            sex = parent.getSex();
         }
 
         HttpUtil.getUtils().getJsonString(API.getCountryList(), new HttpUtil.OnNetResponseListener() {
@@ -183,7 +186,9 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
         switch (v.getId()) {
             case R.id.iv_head:
-                startActivityForResult(new Intent(RegisterActivity.this, SelectHeadActivity.class), 200);
+                Intent intent = new Intent(RegisterActivity.this, SelectHeadActivity.class);
+                intent.putExtra(Constant.HEAD_FALGE, Constant.HEAD_PARENT);
+                startActivityForResult(intent, 200);
                 break;
             case R.id.iv_back:
                 finish();
@@ -251,7 +256,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                         mss.put("realname", userName);
                         mss.put("sex", sex);
                         mss.put("pic_id", headId + "");
-                        mss.put("usericon", "");
+                        mss.put("usericon", headId + "");
                         goUpdate(mss);
                     }
                 }
@@ -308,7 +313,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     mss.put("realname", et_userName.getText().toString().trim());
                     mss.put("sex", sex);
                     mss.put("pic_id", headId + "");
-                    mss.put("usericon", "");
+                    mss.put("usericon", headId + "");
                     HttpUtil.getUtils().getJsonString(API.upDateUserInfo(mss), null);
                 } else {
                     if (TextUtils.equals("1", ui.getError())) {

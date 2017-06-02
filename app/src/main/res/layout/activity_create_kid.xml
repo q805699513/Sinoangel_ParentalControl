@@ -45,7 +45,7 @@
             <ImageView
                 android:layout_width="@dimen/sw600_70dp"
                 android:layout_height="@dimen/sw600_70dp"
-                android:src="@mipmap/login_ic_email" />
+                android:src="@mipmap/ico_nikname" />
 
             <EditText
                 android:id="@+id/et_userName"
@@ -54,6 +54,32 @@
                 android:inputType="textPersonName"
                 android:lines="1"
                 android:maxLength="18" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/sw600_5dp"
+            android:background="@color/sino_white_11" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sw600_50dp"
+            android:layout_marginRight="@dimen/sw600_50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/sw600_70dp"
+                android:layout_height="@dimen/sw600_70dp"
+                android:src="@mipmap/ico_birday" />
+
+            <TextView
+                android:id="@+id/tv_birthday"
+                style="@style/App_EditView_Base"
+                android:layout_marginLeft="@dimen/sw600_15dp"
+                android:lines="1" />
 
         </LinearLayout>
 
@@ -76,7 +102,7 @@
             <ImageView
                 android:layout_width="@dimen/sw600_70dp"
                 android:layout_height="@dimen/sw600_70dp"
-                android:src="@mipmap/login_ic_email" />
+                android:src="@mipmap/ico_sex" />
 
             <View
                 android:layout_width="0dp"
@@ -85,11 +111,16 @@
 
             <RadioButton
                 android:id="@+id/rb_sex_boy"
+                android:layout_width="@dimen/sw600_40dp"
+                android:layout_height="@dimen/sw600_40dp"
+                android:layout_marginLeft="@dimen/sw600_15dp"
+                android:background="@drawable/rb_dian"
+                android:button="@null" />
+
+            <TextView
                 style="@style/TextView_Base"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/sw600_15dp"
-                android:checked="true"
                 android:text="@string/register_user_boy" />
 
             <View
@@ -99,10 +130,16 @@
 
             <RadioButton
                 android:id="@+id/rb_sex_girl"
+                android:layout_width="@dimen/sw600_40dp"
+                android:layout_height="@dimen/sw600_40dp"
+                android:layout_marginLeft="@dimen/sw600_15dp"
+                android:background="@drawable/rb_dian"
+                android:button="@null" />
+
+            <TextView
                 style="@style/TextView_Base"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/sw600_15dp"
                 android:text="@string/register_user_girl" />
 
             <View
@@ -119,29 +156,30 @@
             android:background="@color/sino_white_11" />
 
         <RadioGroup
+            android:id="@+id/rg_theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_marginLeft="@dimen/sw600_50dp"
             android:layout_marginRight="@dimen/sw600_50dp"
             android:layout_marginTop="@dimen/sw600_10dp"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <RadioButton
-                style="@style/RadioButton_Base"
+                android:id="@+id/rb_theme1"
                 android:layout_width="@dimen/sw600_150dp"
                 android:layout_height="@dimen/sw600_150dp"
                 android:background="@mipmap/icon_theme1" />
 
             <RadioButton
-                style="@style/RadioButton_Base"
+                android:id="@+id/rb_theme2"
                 android:layout_width="@dimen/sw600_150dp"
                 android:layout_height="@dimen/sw600_150dp"
                 android:layout_marginLeft="@dimen/sw600_15dp"
                 android:background="@mipmap/icon_theme2" />
 
             <RadioButton
-                style="@style/RadioButton_Base"
+                android:id="@+id/rb_theme3"
                 android:layout_width="@dimen/sw600_150dp"
                 android:layout_height="@dimen/sw600_150dp"
                 android:layout_marginLeft="@dimen/sw600_15dp"

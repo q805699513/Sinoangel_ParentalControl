@@ -20,6 +20,7 @@ import com.sinoangel.ctrl.parentalcontrol.utils.BtnAnmiUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.Constant;
 import com.sinoangel.ctrl.parentalcontrol.utils.DialogUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.HttpUtil;
+import com.sinoangel.ctrl.parentalcontrol.utils.ImageUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.StaticObjects;
 
 /**
@@ -50,15 +51,18 @@ public class ParentAccountActivity extends BaseActivity implements View.OnClickL
                         tv_sex.setText("女");
                     tv_cuntryname.setText(parent.getCountry_name());
 
-                    int index = 0;
-                    try {
-                        index = Integer.parseInt(parent.getPic_id());
-                    } catch (Exception e) {
-
+                    String head = parent.getUsericon();
+                    if (head != null) {
+                        if (head.length() == 1) {
+                            try {
+                                int index = Integer.parseInt(head);
+                                if (index >= 0 && index < 6)
+                                    iv_head.setImageResource(Constant.ParentHeadIdList[index]);
+                            } catch (Exception e) {
+                            }
+                        } else
+                            ImageUtils.showImgUrl(head, iv_head);
                     }
-
-                    iv_head.setImageResource(Constant.ParentHeadIdList[index]);
-
                     break;
             }
             DialogUtils.dismissProgressDialog();
@@ -116,9 +120,12 @@ public class ParentAccountActivity extends BaseActivity implements View.OnClickL
 
                     if (pb.getFlag() == 1) {
                         parent = pb.getData().getUser();
-                        if (parent != null)
+                        if (parent != null) {
+                            Intent intent = new Intent(Constant.ACTION_HEAD_UPDATE);
+                            intent.putExtra(Constant.HEAD_FALGE, parent.getUsericon());
+                            sendBroadcast(intent);
                             handler.sendEmptyMessage(RESULT_OK);
-                        else
+                        } else
                             handler.sendEmptyMessage(RESULT_CANCELED);
                     } else
                         handler.sendEmptyMessage(RESULT_CANCELED);

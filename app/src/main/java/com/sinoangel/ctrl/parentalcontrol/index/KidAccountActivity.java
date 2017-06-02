@@ -1,5 +1,6 @@
 package com.sinoangel.ctrl.parentalcontrol.index;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -15,6 +16,8 @@ import com.sinoangel.ctrl.parentalcontrol.account.kids.bean.KidBean;
 import com.sinoangel.ctrl.parentalcontrol.utils.API;
 import com.sinoangel.ctrl.parentalcontrol.utils.AppUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.BtnAnmiUtils;
+import com.sinoangel.ctrl.parentalcontrol.utils.Constant;
+import com.sinoangel.ctrl.parentalcontrol.utils.DialogUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.HttpUtil;
 
 import java.util.List;
@@ -32,6 +35,7 @@ public class KidAccountActivity extends BaseActivity implements View.OnClickList
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
+            DialogUtils.dismissProgressDialog();
             switch (msg.what) {
                 case RESULT_CANCELED:
                     AppUtils.showToast(getString(R.string.tag_net_request_error));
@@ -67,6 +71,9 @@ public class KidAccountActivity extends BaseActivity implements View.OnClickList
     }
 
     private void getNetData() {
+
+        DialogUtils.showProgressDialog(this,true);
+
         HttpUtil.getUtils().getJsonString(API.getKidsList(), new HttpUtil.OnNetResponseListener() {
             @Override
             public void onNetFail() {
@@ -98,6 +105,14 @@ public class KidAccountActivity extends BaseActivity implements View.OnClickList
             case R.id.iv_back:
                 finish();
                 break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Constant.RESULT_SUCCESS_UPDATE) {
+            getNetData();
         }
     }
 }

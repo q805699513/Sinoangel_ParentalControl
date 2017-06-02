@@ -18,6 +18,7 @@ import com.sinoangel.ctrl.parentalcontrol.index.MainActivity;
 import com.sinoangel.ctrl.parentalcontrol.utils.API;
 import com.sinoangel.ctrl.parentalcontrol.utils.AppUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.BtnAnmiUtils;
+import com.sinoangel.ctrl.parentalcontrol.utils.Constant;
 import com.sinoangel.ctrl.parentalcontrol.utils.DialogUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.HttpUtil;
 import com.sinoangel.ctrl.parentalcontrol.utils.StaticObjects;
@@ -183,10 +184,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
                     if (pb.getFlag() == 1) {
                         ParentBean.DataBean.UserBean parent = pb.getData().getUser();
-                        if (parent != null)
-
+                        if (parent != null) {
+                            Intent intent = new Intent(Constant.ACTION_HEAD_UPDATE);
+                            intent.putExtra(Constant.HEAD_FALGE, parent.getUsericon());
+                            sendBroadcast(intent);
                             handler.sendEmptyMessage(RESULT_GETPARENTINFO_SUCCESS);
-                        else
+                        } else
                             handler.sendEmptyMessage(RESULT_LOGIN_FAILD);
                     } else
                         handler.sendEmptyMessage(RESULT_LOGIN_FAILD);

@@ -3,6 +3,7 @@ package com.sinoangel.ctrl.parentalcontrol.account;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -18,6 +19,7 @@ public class SelectHeadActivity extends BaseActivity implements View.OnClickList
     private ImageView iv_head, iv_sele_head1, iv_sele_head2, iv_sele_head3, iv_sele_head4, iv_sele_head5, iv_sele_head6;
     private View iv_back, btn_ok;
     private int headId;
+    private int[] headList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,12 @@ public class SelectHeadActivity extends BaseActivity implements View.OnClickList
         btnAnmiUtils.setBtnAnmi(iv_sele_head4);
         btnAnmiUtils.setBtnAnmi(iv_sele_head5);
         btnAnmiUtils.setBtnAnmi(iv_sele_head6);
+
+        int flage = getIntent().getIntExtra(Constant.HEAD_FALGE, Constant.HEAD_PARENT);
+        if (flage == Constant.HEAD_PARENT)
+            headList = Constant.ParentHeadIdList;
+        else
+            headList = Constant.KidHeadIdList;
     }
 
     @Override
@@ -61,27 +69,27 @@ public class SelectHeadActivity extends BaseActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.iv_sele_head1:
                 headId = 0;
-                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
+                iv_head.setImageResource(headList[headId]);
                 break;
             case R.id.iv_sele_head2:
                 headId = 1;
-                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
+                iv_head.setImageResource(headList[headId]);
                 break;
             case R.id.iv_sele_head3:
                 headId = 2;
-                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
+                iv_head.setImageResource(headList[headId]);
                 break;
             case R.id.iv_sele_head4:
                 headId = 3;
-                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
+                iv_head.setImageResource(headList[headId]);
                 break;
             case R.id.iv_sele_head5:
                 headId = 4;
-                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
+                iv_head.setImageResource(headList[headId]);
                 break;
             case R.id.iv_sele_head6:
                 headId = 5;
-                iv_head.setImageResource(Constant.ParentHeadIdList[headId]);
+                iv_head.setImageResource(headList[headId]);
                 break;
             case R.id.iv_back:
                 finish();

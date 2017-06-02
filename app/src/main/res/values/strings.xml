@@ -20,7 +20,7 @@
     <string name="login_reset_pwd"> 密码重置邮件已发送，请及时查看邮箱</string>
     <string name="register_title">注册</string>
     <string name="register_fix_head">修改头像</string>
-    <string name="register_userName_null">请填用户名</string>
+    <string name="register_userName_null">请填写昵称</string>
     <string name="register_userName_error">用户名含非法字符</string>
     <string name="register_user_boy">男</string>
     <string name="register_user_girl">女</string>
@@ -31,6 +31,7 @@
     <!--护眼设置-->
     <string name="eyeshield_title">护眼设置</string>
     <string name="eyeshield_use_time">累计使用时间</string>
+    <string name="eyeshield_once_time">单次使用时间</string>
     <string name="eyeshield_wait_time">休息时间</string>
 
     <!--家长账户-->
@@ -72,6 +73,8 @@
 
     <!--行为统计-->
     <string name="actionstatistics_title">行为统计</string>
+    <string name="actionstatistics_lab1">使用了</string>
+    <string name="actionstatistics_lab2">使用时长为</string>
 
     <!--button-->
     <string name="btn_ok">确认</string>
@@ -89,7 +92,17 @@
     <string name="tag_delete">确认删除吗?</string>
 
     <!--单位-->
+    <string name="unit_s">秒</string>
+    <string name="unit_m">分钟</string>
     <string name="unit_h">小时</string>
     <string name="unit_d">天</string>
     <string name="unit_coin">星币</string>
+
+    <string name="sunday">日</string>
+    <string name="monday">一</string>
+    <string name="thesday">二</string>
+    <string name="wednesday">三</string>
+    <string name="thursday">四</string>
+    <string name="friday">五</string>
+    <string name="saturday">六</string>
 </resources>

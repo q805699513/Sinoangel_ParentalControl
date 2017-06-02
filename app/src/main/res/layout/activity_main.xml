@@ -24,11 +24,11 @@
             android:orientation="horizontal"
             android:paddingLeft="@dimen/sw600_10dp"
             android:paddingRight="@dimen/sw600_10dp"
-            android:paddingTop="@dimen/sw600_20dp">
+            android:paddingTop="@dimen/sw600_30dp">
 
             <com.sinoangel.ctrl.parentalcontrol.customview.CircleImageView
                 android:id="@+id/iv_head"
-                android:layout_width="@dimen/sw600_80dp"
+                android:layout_width="46dp"
                 android:layout_height="@dimen/sw600_80dp"
                 android:layout_marginLeft="@dimen/sw600_20dp"
                 android:src="@mipmap/icon_parent_1" />

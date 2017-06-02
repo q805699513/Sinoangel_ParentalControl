@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_background"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/sw600_20dp">
+
+
+        <ImageButton
+            android:id="@+id/btnPreMonth"
+            android:layout_width="@dimen/sw600_30dp"
+            android:layout_height="@dimen/sw600_70dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/sw600_10dp"
+            android:background="@mipmap/ic_left" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCurrentMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="2016-02"
+                android:textColor="@color/sino_white"
+                android:textSize="@dimen/sw600_30sp" />
+
+            <LinearLayout
+                android:layout_width="@dimen/sw600_450dp"
+                android:layout_height="@dimen/sw600_500dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_bk_wilhte_rang"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sw600_40dp"
+                    android:layout_marginBottom="@dimen/sw600_10dp"
+                    android:layout_marginTop="@dimen/sw600_20dp">
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/dateStyle"
+                            android:text="@string/sunday"
+                            android:textColor="@color/sino_white" />
+
+                        <TextView
+                            style="@style/dateStyle"
+                            android:text="@string/monday"
+                            android:textColor="@color/sino_white" />
+
+                        <TextView
+                            style="@style/dateStyle"
+                            android:text="@string/thesday"
+                            android:textColor="@color/sino_white" />
+
+                        <TextView
+                            style="@style/dateStyle"
+                            android:text="@string/wednesday"
+                            android:textColor="@color/sino_white" />
+
+                        <TextView
+                            style="@style/dateStyle"
+                            android:text="@string/thursday"
+                            android:textColor="@color/sino_white" />
+
+                        <TextView
+                            style="@style/dateStyle"
+                            android:text="@string/friday"
+                            android:textColor="@color/sino_white" />
+
+                        <TextView
+                            style="@style/dateStyle"
+                            android:text="@string/saturday"
+                            android:textColor="@color/sino_white" />
+                    </TableRow>
+                </TableLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vp_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/sw600_15dp"
+                android:layout_marginTop="@dimen/sw600_20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_ok"
+                    style="@style/App_Button_TextView"
+                    android:layout_width="@dimen/sw600_80dp"
+                    android:layout_height="@dimen/sw600_80dp"
+                    android:background="@drawable/btn_bk_wilhte_rang"
+                    android:text="√" />
+
+                <TextView
+                    android:id="@+id/btn_no"
+                    style="@style/App_Button_TextView"
+                    android:layout_width="@dimen/sw600_80dp"
+                    android:layout_height="@dimen/sw600_80dp"
+                    android:layout_marginLeft="@dimen/sw600_100dp"
+                    android:background="@drawable/btn_bk_wilhte_rang"
+                    android:text="×" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnNextMonth"
+            android:layout_width="@dimen/sw600_30dp"
+            android:layout_height="@dimen/sw600_70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/sw600_10dp"
+            android:background="@mipmap/ic_right" />
+
+    </LinearLayout>
+
+</RelativeLayout>

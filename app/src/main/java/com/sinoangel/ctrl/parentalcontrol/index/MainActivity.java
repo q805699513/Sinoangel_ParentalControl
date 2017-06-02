@@ -1,6 +1,9 @@
 package com.sinoangel.ctrl.parentalcontrol.index;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,6 +15,8 @@ import com.sinoangel.ctrl.parentalcontrol.account.parent.bean.TokenBean;
 import com.sinoangel.ctrl.parentalcontrol.base.BaseActivity;
 import com.sinoangel.ctrl.parentalcontrol.base.BaseApplication;
 import com.sinoangel.ctrl.parentalcontrol.utils.BtnAnmiUtils;
+import com.sinoangel.ctrl.parentalcontrol.utils.Constant;
+import com.sinoangel.ctrl.parentalcontrol.utils.ImageUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.StaticObjects;
 import com.sinoangel.ctrl.parentalcontrol.webview.ShopActivity;
 
@@ -20,12 +25,32 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private ImageView iv_head, iv_shop;//头像 商店
     private View ll_main_actionStatistics, ll_main_moneyManage;
 
+    private BroadcastReceiver headReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String head = intent.getStringExtra(Constant.HEAD_FALGE);
+            if (head != null) {
+                if (head.length() == 1) {
+                    try {
+                        int index = Integer.parseInt(head);
+                        if (index >= 0 && index < 6)
+                            iv_head.setImageResource(Constant.ParentHeadIdList[index]);
+                    } catch (Exception e) {
+                    }
+                } else
+                    ImageUtils.showImgUrl(head, iv_head);
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
 
+        IntentFilter intentFilter = new IntentFilter(Constant.ACTION_HEAD_UPDATE);
+        registerReceiver(headReceiver, intentFilter);
     }
 
 
@@ -68,7 +93,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         //点击动画
         switch (v.getId()) {
             case R.id.iv_shop:
-
                 if (uidb != null) {
                     startActivity(new Intent(this, ShopActivity.class));
                 }
@@ -86,5 +110,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(this, ActionStatisticsActivity.class));
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(headReceiver);
     }
 }

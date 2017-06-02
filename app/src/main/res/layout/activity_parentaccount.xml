@@ -43,7 +43,7 @@
             <ImageView
                 android:layout_width="@dimen/sw600_70dp"
                 android:layout_height="@dimen/sw600_70dp"
-                android:src="@mipmap/login_ic_email" />
+                android:src="@mipmap/ico_nikname" />
 
             <TextView
                 android:id="@+id/tv_username"
@@ -63,7 +63,7 @@
             <ImageView
                 android:layout_width="@dimen/sw600_70dp"
                 android:layout_height="@dimen/sw600_70dp"
-                android:src="@mipmap/login_ic_email" />
+                android:src="@mipmap/ico_youxiang" />
 
             <TextView
                 android:id="@+id/tv_email"
@@ -83,7 +83,7 @@
             <ImageView
                 android:layout_width="@dimen/sw600_70dp"
                 android:layout_height="@dimen/sw600_70dp"
-                android:src="@mipmap/login_ic_email" />
+                android:src="@mipmap/ico_sex" />
 
             <TextView
                 android:id="@+id/tv_sex"
@@ -103,7 +103,7 @@
             <ImageView
                 android:layout_width="@dimen/sw600_70dp"
                 android:layout_height="@dimen/sw600_70dp"
-                android:src="@mipmap/login_ic_email" />
+                android:src="@mipmap/ico_guojia" />
 
             <TextView
                 android:id="@+id/tv_cuntryname"

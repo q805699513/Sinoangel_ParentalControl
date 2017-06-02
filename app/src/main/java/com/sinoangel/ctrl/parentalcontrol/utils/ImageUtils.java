@@ -2,18 +2,25 @@ package com.sinoangel.ctrl.parentalcontrol.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
+import android.graphics.Xfermode;
 import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 import android.renderscript.Type;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
+import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.sinoangel.ctrl.parentalcontrol.R;
 import com.sinoangel.ctrl.parentalcontrol.base.BaseApplication;
 
 /**
@@ -29,7 +36,7 @@ public class ImageUtils {
     }
 
     public static Bitmap getBulrBit(Window window) {
-        return blurBitmap(myShot(window), 3);
+        return blurBitmap(myShot(window), 8);
     }
 
     private static Bitmap blurBitmap(Bitmap bitmap, float radius) {
@@ -87,8 +94,8 @@ public class ImageUtils {
     //获取屏幕截图
     private static Bitmap myShot(Window window) {
         // 获取windows中最顶层的view
-        int hei = AppUtils.getHei() / 10;
-        int wei = AppUtils.getWei() / 10;
+        int hei = AppUtils.getHei() / 1;
+        int wei = AppUtils.getWei() / 1;
         Bitmap bmp = Bitmap.createBitmap(wei, hei, Bitmap.Config.ARGB_4444);
         View view = window.getDecorView();
 
@@ -99,10 +106,16 @@ public class ImageUtils {
 
         Canvas canvas = new Canvas(bmp);
         Bitmap bitmap = view.getDrawingCache();
+
         if (bitmap != null && !bitmap.isRecycled())
             canvas.drawBitmap(bitmap, new Rect(0, 50, bitmap.getWidth(), bitmap.getHeight()), new Rect(0, 0, wei, hei), null);
+
         // 销毁缓存信息
         view.destroyDrawingCache();
+
+        int color = ContextCompat.getColor(BaseApplication.getInstance(), R.color.sino_black_22);
+        canvas.drawColor(color);
+
         return bmp;
     }
 }

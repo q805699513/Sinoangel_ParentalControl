@@ -13,7 +13,10 @@ import com.sinoangel.ctrl.parentalcontrol.R;
 import com.sinoangel.ctrl.parentalcontrol.account.kids.CreateKidActivity;
 import com.sinoangel.ctrl.parentalcontrol.index.KidAccountActivity;
 import com.sinoangel.ctrl.parentalcontrol.account.kids.bean.KidBean;
+import com.sinoangel.ctrl.parentalcontrol.utils.API;
 import com.sinoangel.ctrl.parentalcontrol.utils.Constant;
+import com.sinoangel.ctrl.parentalcontrol.utils.DialogUtils;
+import com.sinoangel.ctrl.parentalcontrol.utils.HttpUtil;
 import com.sinoangel.ctrl.parentalcontrol.utils.ImageUtils;
 
 import java.util.List;
@@ -58,17 +61,21 @@ public class KidAccountAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         if (bvHolder instanceof ViewHolder_Com) {
             ViewHolder_Com holder = (ViewHolder_Com) bvHolder;
             KidBean.DataBean kidBean = dataBeanList.get(position);
-            holder.dataBean = kidBean;
 
-            if (kidBean.getUsericon() != null && kidBean.getUsericon().length() == 1) {
+            holder.iv_edit.setTag(R.id.tag_click_id, kidBean);
+            holder.iv_delete.setTag(R.id.tag_click_id, kidBean);
+
+            if (kidBean.getUsericon().length() == 1) {
                 int picId = 0;
                 try {
                     picId = Integer.parseInt(kidBean.getPic_id());
                 } catch (Exception e) {
                 }
-                holder.iv_head.setImageResource(Constant.KidHeadIdList[picId]);
-            } else
-                ImageUtils.showImgUrl(kidBean.getUsericon(), holder.iv_head);
+                if (picId < 6)
+                    holder.iv_head.setImageResource(Constant.KidHeadIdList[picId]);
+                else
+                    ImageUtils.showImgUrl(kidBean.getUsericon(), holder.iv_head);
+            }
             switch (kidBean.getTheme_id()) {
                 case "0":
                     holder.iv_theme.setImageResource(R.mipmap.icon_theme1);
@@ -80,10 +87,9 @@ public class KidAccountAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                     holder.iv_theme.setImageResource(R.mipmap.icon_theme3);
                     break;
             }
-//            ImageUtils.showImgUrl(kidBean.getTheme_id(), holder.iv_theme);
             holder.iv_name.setText(kidBean.getNickname());
             holder.tv_birthday.setText(kidBean.getBirthday());
-            if (TextUtils.equals("0", kidBean.getSex()))
+            if (TextUtils.equals("1", kidBean.getSex()))
                 holder.tv_sex.setText(R.string.register_user_boy);
             else
                 holder.tv_sex.setText(R.string.register_user_girl);
@@ -98,18 +104,30 @@ public class KidAccountAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     @Override
     public void onClick(View v) {
-        KidBean.DataBean dataBean = (KidBean.DataBean) v.getTag(R.id.tag_click_id);
+        final KidBean.DataBean dataBean = (KidBean.DataBean) v.getTag(R.id.tag_click_id);
         switch (v.getId()) {
             case R.id.iv_edit:
                 Intent intent = new Intent(kidAccountActivity, CreateKidActivity.class);
                 intent.putExtra(Constant.USERBEAN, dataBean);
-                kidAccountActivity.startActivity(intent);
+                kidAccountActivity.startActivityForResult(intent,0);
                 break;
             case R.id.iv_delete:
+                DialogUtils.showTwoBtnDialog(kidAccountActivity, kidAccountActivity.getString(R.string.tag_delete), true, new DialogUtils.DialogBtnListener() {
+                    @Override
+                    public void onBtn_OK() {
+                        dataBeanList.remove(dataBean);
+                        notifyDataSetChanged();
+                        HttpUtil.getUtils().getJsonString(API.deleteKid(dataBean.getId()), null);
+                    }
 
+                    @Override
+                    public void onBtn_NO() {
+
+                    }
+                });
                 break;
             case R.id.rl_box:
-                kidAccountActivity.startActivity(new Intent(kidAccountActivity, CreateKidActivity.class));
+                kidAccountActivity.startActivityForResult(new Intent(kidAccountActivity, CreateKidActivity.class), 200);
                 break;
         }
 
@@ -119,8 +137,6 @@ public class KidAccountAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         public ImageView iv_head, iv_theme;
         private TextView iv_name, tv_birthday, tv_sex;
         private View iv_edit, iv_delete;
-
-        public KidBean.DataBean dataBean;
 
         public ViewHolder_Com(View itemView) {
             super(itemView);
@@ -135,8 +151,6 @@ public class KidAccountAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             iv_edit.setOnClickListener(KidAccountAdapter.this);
             iv_delete.setOnClickListener(KidAccountAdapter.this);
 
-            iv_edit.setTag(R.id.tag_click_id, dataBean);
-            iv_delete.setTag(R.id.tag_click_id, dataBean);
         }
 
     }
@@ -154,7 +168,7 @@ public class KidAccountAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     @Override
     public int getItemViewType(int position) {
-        if (position == dataBeanList.size()-1) {
+        if (position == dataBeanList.size() - 1) {
             return TYEP_ADD;
         } else {
             return TYEP_COMM;

@@ -46,7 +46,7 @@
                     <ImageView
                         android:layout_width="@dimen/sw600_50dp"
                         android:layout_height="@dimen/sw600_50dp"
-                        android:background="@color/sino_white" />
+                        android:background="@mipmap/ico_nikname" />
 
                     <TextView
                         android:id="@+id/tv_name"
@@ -73,7 +73,7 @@
                     <ImageView
                         android:layout_width="@dimen/sw600_50dp"
                         android:layout_height="@dimen/sw600_50dp"
-                        android:background="@color/sino_white" />
+                        android:background="@mipmap/ico_birday" />
 
                     <TextView
                         android:id="@+id/tv_birthday"
@@ -100,7 +100,7 @@
                     <ImageView
                         android:layout_width="@dimen/sw600_50dp"
                         android:layout_height="@dimen/sw600_50dp"
-                        android:background="@color/sino_white" />
+                        android:background="@mipmap/ico_sex" />
 
                     <TextView
                         android:id="@+id/tv_sex"

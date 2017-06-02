@@ -30,9 +30,9 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="@dimen/sw600_50dp"
-                    android:layout_height="@dimen/sw600_50dp"
-                    android:src="@color/sino_white" />
+                    android:layout_width="@dimen/sw600_30dp"
+                    android:layout_height="@dimen/sw600_30dp"
+                    android:src="@mipmap/ic_right" />
 
                 <View
                     android:layout_width="0dp"

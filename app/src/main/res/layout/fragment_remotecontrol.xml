@@ -24,24 +24,28 @@
             android:id="@+id/ll_box_kidaccount"
             android:layout_width="match_parent"
             android:layout_height="@dimen/sw600_110dp"
+            android:visibility="gone"
             android:background="@drawable/btn_pre_main_menu"
             android:orientation="horizontal" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:visibility="gone"
             android:background="@color/sino_white_11" />
 
         <LinearLayout
             android:id="@+id/ll_box_internet"
             android:layout_width="match_parent"
             android:layout_height="@dimen/sw600_110dp"
+            android:visibility="gone"
             android:background="@drawable/btn_pre_main_menu"
             android:orientation="horizontal" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
+            android:visibility="gone"
             android:background="@color/sino_white_11" />
 
         <LinearLayout
@@ -113,12 +117,14 @@
             <ImageView
                 style="@style/Main_Menu_Icon_ImageView"
                 android:layout_marginTop="1dp"
-                android:src="@mipmap/ic_main_account" />
+                android:src="@mipmap/ic_main_account"
+                android:visibility="gone" />
 
             <ImageView
                 style="@style/Main_Menu_Icon_ImageView"
                 android:layout_marginTop="1dp"
-                android:src="@mipmap/ic_main_internet" />
+                android:src="@mipmap/ic_main_internet"
+                android:visibility="gone" />
 
             <ImageView
                 style="@style/Main_Menu_Icon_ImageView"
@@ -162,7 +168,8 @@
                 android:layout_marginTop="1dp"
                 android:paddingLeft="@dimen/sw600_15dp"
                 android:paddingRight="@dimen/sw600_15dp"
-                android:text="@string/kidaccount_title" />
+                android:text="@string/kidaccount_title"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tv_lab_internet"
@@ -171,7 +178,8 @@
                 android:layout_marginTop="1dp"
                 android:paddingLeft="@dimen/sw600_15dp"
                 android:paddingRight="@dimen/sw600_15dp"
-                android:text="@string/net_title" />
+                android:text="@string/net_title"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tv_lab_consumptionplan"
