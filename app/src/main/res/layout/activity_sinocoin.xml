@@ -31,6 +31,7 @@
             android:text="@string/sinocoin_remain" />
 
         <TextView
+            android:id="@+id/tv_yue"
             style="@style/TextView_Base"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -41,50 +42,39 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/lab1"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
+        android:layout_marginLeft="@dimen/sw600_10dp"
+        android:orientation="vertical">
 
-        <RadioGroup
-            android:id="@+id/rg_dian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <TextView
+            android:id="@+id/btn_coin1"
+            style="@style/App_Button_TextView"
+            android:layout_width="@dimen/sw600_450dp"
+            android:background="@drawable/btn_bk_wilhte_rang"
+            android:text="100星币" />
 
-            <RadioButton
-                android:id="@+id/rb_alipay"
-                style="@style/RadioButton_Base"
-                android:layout_width="@dimen/sw600_40dp"
-                android:layout_height="@dimen/sw600_40dp"
-                android:layout_marginTop="@dimen/sw600_30dp"
-                android:background="@drawable/rb_dian" />
+        <TextView
+            android:id="@+id/btn_coin2"
+            style="@style/App_Button_TextView"
+            android:layout_width="@dimen/sw600_450dp"
+            android:layout_marginTop="@dimen/sw600_50dp"
+            android:background="@drawable/btn_bk_wilhte_rang"
+            android:text="300星币" />
 
-            <RadioButton
-                android:id="@+id/rb_wechat"
-                style="@style/RadioButton_Base"
-                android:layout_width="@dimen/sw600_40dp"
-                android:layout_height="@dimen/sw600_40dp"
-                android:layout_marginTop="@dimen/sw600_110dp"
-                android:background="@drawable/rb_dian" />
-        </RadioGroup>
+        <TextView
+            android:id="@+id/btn_coin3"
+            style="@style/App_Button_TextView"
+            android:layout_width="@dimen/sw600_450dp"
+            android:layout_marginTop="@dimen/sw600_50dp"
+            android:background="@drawable/btn_bk_wilhte_rang"
+            android:text="600星币" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/sw600_10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/iv_alipay"
-                android:layout_width="@dimen/sw600_269dp"
-                android:layout_height="@dimen/sw600_100dp"
-                android:src="@mipmap/zhifubao" />
-
-            <ImageView
-                android:id="@+id/iv_wechat"
-                android:layout_width="@dimen/sw600_269dp"
-                android:layout_height="@dimen/sw600_100dp"
-                android:layout_marginTop="@dimen/sw600_50dp"
-                android:src="@mipmap/weixin" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/btn_coin4"
+            style="@style/App_Button_TextView"
+            android:layout_width="@dimen/sw600_450dp"
+            android:layout_marginTop="@dimen/sw600_50dp"
+            android:background="@drawable/btn_bk_wilhte_rang"
+            android:text="1000星币" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -59,8 +59,17 @@ public class SelectHeadActivity extends BaseActivity implements View.OnClickList
         int flage = getIntent().getIntExtra(Constant.HEAD_FALGE, Constant.HEAD_PARENT);
         if (flage == Constant.HEAD_PARENT)
             headList = Constant.ParentHeadIdList;
-        else
+        else {
             headList = Constant.KidHeadIdList;
+            iv_sele_head1.setImageResource(headList[0]);
+            iv_sele_head2.setImageResource(headList[1]);
+            iv_sele_head3.setImageResource(headList[2]);
+            iv_sele_head4.setImageResource(headList[3]);
+            iv_sele_head5.setImageResource(headList[4]);
+            iv_sele_head6.setImageResource(headList[5]);
+        }
+        int headId = getIntent().getIntExtra(Constant.HEADID, 0);
+        iv_head.setImageResource(headList[headId]);
     }
 
     @Override

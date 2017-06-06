@@ -188,6 +188,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             case R.id.iv_head:
                 Intent intent = new Intent(RegisterActivity.this, SelectHeadActivity.class);
                 intent.putExtra(Constant.HEAD_FALGE, Constant.HEAD_PARENT);
+                intent.putExtra(Constant.HEADID, headId);
                 startActivityForResult(intent, 200);
                 break;
             case R.id.iv_back:

@@ -4,10 +4,8 @@
 
     <application
         android:name=".base.BaseApplication"
-        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="false"
         android:theme="@style/AppTheme">
 
         <!-- 友盟 -->
@@ -70,12 +68,21 @@
             android:name=".index.SinoCoinActivity"
             android:screenOrientation="userPortrait" />
         <activity
+            android:name=".index.PayActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
             android:name=".account.parent.ParentAccountActivity"
             android:launchMode="singleTask"
             android:screenOrientation="userPortrait" />
         <activity
             android:name=".account.kids.CreateKidActivity"
-            android:screenOrientation="userPortrait"></activity>
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".curriculumschedule.CurriculumScheduleActivity"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".curriculumschedule.CurriculumVedioActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout|uiMode"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import com.sinoangel.ctrl.parentalcontrol.BuildConfig;
 import com.sinoangel.ctrl.parentalcontrol.R;
 import com.sinoangel.ctrl.parentalcontrol.utils.AppUtils;
 import com.umeng.analytics.MobclickAgent;
+import com.youku.cloud.player.YoukuPlayerConfig;
 
 import java.util.List;
 
@@ -20,6 +21,9 @@ import java.util.List;
  * 类说明：全局的appliction
  */
 public class BaseApplication extends Application {
+
+    private static final String CLIENT_ID_WITH_AD = "08833bce826c6f8a";
+    private static final String CLIENT_SECRET_WITH_AD = "729ce34694c94c57c01bab4d0fa41c7a";
 
     private static BaseApplication instance;
 
@@ -39,6 +43,10 @@ public class BaseApplication extends Application {
 
         MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
         getDefaultTracker();
+
+        YoukuPlayerConfig.setClientIdAndSecret(CLIENT_ID_WITH_AD, CLIENT_SECRET_WITH_AD);
+        YoukuPlayerConfig.onInitial(this);
+        YoukuPlayerConfig.setLog(true);
     }
 
     /**

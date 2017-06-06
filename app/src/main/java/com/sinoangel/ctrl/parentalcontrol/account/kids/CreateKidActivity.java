@@ -179,6 +179,7 @@ public class CreateKidActivity extends BaseActivity implements View.OnClickListe
             case R.id.iv_head:
                 Intent intent = new Intent(CreateKidActivity.this, SelectHeadActivity.class);
                 intent.putExtra(Constant.HEAD_FALGE, Constant.HEAD_KIDS);
+                intent.putExtra(Constant.HEADID, headId);
                 startActivityForResult(intent, 200);
                 break;
             case R.id.btn_register:

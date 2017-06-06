@@ -192,7 +192,6 @@ public class ConsumeProtectionActivity extends BaseActivity implements View.OnCl
     protected void onDestroy() {
         super.onDestroy();
 
-
         handler.removeCallbacksAndMessages(null);
     }
 }

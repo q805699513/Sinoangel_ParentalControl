@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TextView
                     style="@style/Main_Menu_TextView"
@@ -75,7 +75,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/sw600_25dp"
                 android:background="@color/sino_white_11"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -124,14 +124,14 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/sw600_25dp"
                 android:background="@color/sino_white_11"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TextView
                     style="@style/Main_Menu_TextView"

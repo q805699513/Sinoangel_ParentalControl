@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sinoangel.ctrl.parentalcontrol.webview.RecyclerBanner
+        android:id="@+id/rb_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sw600_300dp"
+        android:paddingLeft="@dimen/sw600_10dp"
+        android:paddingRight="@dimen/sw600_10dp" />
+
+</RelativeLayout>

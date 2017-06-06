@@ -76,12 +76,17 @@
     <string name="actionstatistics_lab1">使用了</string>
     <string name="actionstatistics_lab2">使用时长为</string>
 
+    <!--课程表-->
+    <string name="curricu_title">订阅</string>
+
     <!--button-->
     <string name="btn_ok">确认</string>
     <string name="btn_no">取消</string>
     <string name="btn_save">保存</string>
     <string name="btn_update">修改</string>
     <string name="btn_exit">退出</string>
+    <string name="btn_pay">付款</string>
+    <string name="btn_booking">订阅</string>
 
 
     <!--提示语-->
