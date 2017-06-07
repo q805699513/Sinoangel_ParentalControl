@@ -74,9 +74,6 @@
             android:layout_marginTop="@dimen/sw600_10dp"
             android:background="@color/sino_white_11" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:src="@mipmap/img1"
-            android:layout_height="@dimen/sw600_500dp" />
+
     </LinearLayout>
 </ScrollView>
