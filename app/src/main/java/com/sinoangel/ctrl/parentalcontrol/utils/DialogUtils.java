@@ -4,14 +4,12 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sinoangel.ctrl.parentalcontrol.R;
-import com.sinoangel.ctrl.parentalcontrol.base.BaseApplication;
 import com.sinoangel.ctrl.parentalcontrol.customview.WheelView;
 
 import java.util.List;
@@ -201,6 +199,11 @@ public class DialogUtils {
         } else {
             dialog.dismiss();
         }
+    }
+
+
+    public static void showNumSetDialog(Activity activity) {
+
     }
 
 

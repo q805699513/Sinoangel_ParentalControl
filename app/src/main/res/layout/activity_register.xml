@@ -32,14 +32,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iv_head"
-        android:layout_marginTop="@dimen/sw600_15dp"
+        android:layout_marginTop="@dimen/sw600_50dp"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/sw600_50dp"
-            android:layout_marginRight="@dimen/sw600_50dp"
+            android:layout_marginLeft="@dimen/sw600_100dp"
+            android:layout_marginRight="@dimen/sw600_100dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -50,10 +50,40 @@
             <EditText
                 android:id="@+id/et_userName"
                 style="@style/App_EditView_Base"
-                android:layout_marginLeft="@dimen/sw600_15dp"
+                android:layout_marginLeft="@dimen/sw600_50dp"
                 android:inputType="textPersonName"
                 android:lines="1"
                 android:maxLength="18" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/sw600_5dp"
+            android:background="@color/sino_white_11" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sw600_100dp"
+            android:layout_marginRight="@dimen/sw600_100dp"
+            android:layout_marginTop="@dimen/sw600_10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/sw600_70dp"
+                android:layout_height="@dimen/sw600_70dp"
+                android:src="@mipmap/ico_youxiang" />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/App_EditView_Base"
+                android:layout_marginLeft="@dimen/sw600_50dp"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:maxLength="30" />
 
         </LinearLayout>
 
@@ -67,8 +97,8 @@
             android:id="@+id/rg_sex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/sw600_50dp"
-            android:layout_marginRight="@dimen/sw600_50dp"
+            android:layout_marginLeft="@dimen/sw600_100dp"
+            android:layout_marginRight="@dimen/sw600_100dp"
             android:layout_marginTop="@dimen/sw600_10dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -116,9 +146,9 @@
                 style="@style/TextView_Base"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/sw600_25sp"
                 android:layout_marginLeft="@dimen/sw600_5dp"
-                android:text="@string/register_user_girl" />
+                android:text="@string/register_user_girl"
+                android:textSize="@dimen/sw600_25sp" />
 
             <View
                 android:layout_width="0dp"
@@ -134,40 +164,11 @@
             android:background="@color/sino_white_11" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/sw600_50dp"
-            android:layout_marginRight="@dimen/sw600_50dp"
-            android:layout_marginTop="@dimen/sw600_10dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="@dimen/sw600_70dp"
-                android:layout_height="@dimen/sw600_70dp"
-                android:src="@mipmap/ico_youxiang" />
-
-            <EditText
-                android:id="@+id/et_email"
-                style="@style/App_EditView_Base"
-                android:layout_marginLeft="@dimen/sw600_15dp"
-                android:inputType="textEmailAddress"
-                android:lines="1"
-                android:maxLength="30" />
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="@dimen/sw600_5dp"
-            android:background="@color/sino_white_11" />
-
-        <LinearLayout
             android:id="@+id/ll_box_pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/sw600_50dp"
-            android:layout_marginRight="@dimen/sw600_50dp"
+            android:layout_marginLeft="@dimen/sw600_100dp"
+            android:layout_marginRight="@dimen/sw600_100dp"
             android:layout_marginTop="@dimen/sw600_10dp"
             android:orientation="horizontal">
 
@@ -179,7 +180,7 @@
             <EditText
                 android:id="@+id/et_pwd"
                 style="@style/App_EditView_Base"
-                android:layout_marginLeft="@dimen/sw600_15dp"
+                android:layout_marginLeft="@dimen/sw600_50dp"
                 android:inputType="textPassword"
                 android:lines="1"
                 android:maxLength="18" />
@@ -196,8 +197,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/sw600_50dp"
-            android:layout_marginRight="@dimen/sw600_50dp"
+            android:layout_marginLeft="@dimen/sw600_100dp"
+            android:layout_marginRight="@dimen/sw600_100dp"
             android:layout_marginTop="@dimen/sw600_10dp"
             android:orientation="horizontal">
 
@@ -209,7 +210,7 @@
             <TextView
                 android:id="@+id/tv_country"
                 style="@style/App_EditView_Base"
-                android:layout_marginLeft="@dimen/sw600_15dp" />
+                android:layout_marginLeft="@dimen/sw600_50dp" />
 
         </LinearLayout>
 
@@ -224,7 +225,7 @@
             style="@style/App_Button_TextView"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/sw600_25dp"
-            android:background="@drawable/btn_bk_wilhte"
+            android:background="@drawable/btn_bk_orange"
             android:text="@string/register_title" />
     </LinearLayout>
 

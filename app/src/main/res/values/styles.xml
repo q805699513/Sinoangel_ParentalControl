@@ -20,10 +20,11 @@
 
     <!--topbar样式-->
     <style name="Main_Title_TextView">
-        <item name="android:textSize">@dimen/sw600_35sp</item>
+        <item name="android:textSize">@dimen/sw600_39sp</item>
         <item name="android:textColor">@color/sino_white_99</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/sw600_80dp</item>
+        <item name="android:layout_marginTop">@dimen/sw600_40dp</item>
         <item name="android:gravity">center</item>
     </style>
 
@@ -32,19 +33,19 @@
         <item name="android:textSize">@dimen/sw600_26sp</item>
         <item name="android:textColor">@color/sino_white_99</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">@dimen/sw600_80dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
     </style>
 
     <style name="Main_Menu_Icon_ImageView">
-        <item name="android:layout_width">@dimen/sw600_110dp</item>
-        <item name="android:layout_height">@dimen/sw600_110dp</item>
+        <item name="android:layout_width">@dimen/sw600_150dp</item>
+        <item name="android:layout_height">@dimen/sw600_150dp</item>
         <item name="android:padding">@dimen/sw600_15dp</item>
     </style>
 
     <style name="App_Button_TextView">
         <item name="android:textSize">@dimen/sw600_30sp</item>
-        <item name="android:textColor">@color/sino_white_99</item>
+        <item name="android:textColor">@color/sino_white</item>
         <item name="android:layout_width">@dimen/sw600_450dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
@@ -71,7 +72,7 @@
         <item name="android:paddingTop">@dimen/sw600_10dp</item>
         <item name="android:paddingBottom">@dimen/sw600_10dp</item>
         <item name="android:adjustViewBounds">true</item>
-        <item name="android:layout_marginTop">@dimen/sw600_20dp</item>
+        <item name="android:layout_marginTop">@dimen/sw600_40dp</item>
         <item name="android:layout_marginLeft">@dimen/sw600_15dp</item>
         <item name="android:src">@mipmap/back</item>
 

@@ -37,7 +37,7 @@
             style="@style/Main_Menu_TextView"
             android:layout_width="wrap_content"
             android:layout_marginLeft="@dimen/sw600_50dp"
-            android:background="@drawable/btn_bk_wilhte"
+            android:background="@drawable/btn_bk_orange"
             android:paddingLeft="@dimen/sw600_30dp"
             android:paddingRight="@dimen/sw600_30dp"
             android:text="@string/abou_title" />

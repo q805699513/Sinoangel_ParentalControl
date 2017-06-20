@@ -1,4 +1,4 @@
-package com.sinoangel.ctrl.parentalcontrol.webview;
+package com.sinoangel.ctrl.parentalcontrol.customview;
 
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
@@ -16,8 +16,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.bumptech.glide.Glide;
 import com.sinoangel.ctrl.parentalcontrol.R;
+import com.sinoangel.ctrl.parentalcontrol.curriculumschedule.bean.CurriculIndex;
 import com.sinoangel.ctrl.parentalcontrol.utils.ImageUtils;
 
 import java.util.ArrayList;
@@ -129,7 +129,7 @@ public class RecyclerBanner extends FrameLayout {
         }
     }
 
-    public int setDatas(List<BannerEntity> datas) {
+    public int setDatas(List<CurriculIndex.DataBean.BanBean> datas) {
         setPlaying(false);
         this.datas.clear();
         linearLayout.removeAllViews();

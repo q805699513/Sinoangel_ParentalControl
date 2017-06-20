@@ -14,7 +14,7 @@
         android:layout_width="@dimen/sw600_550dp"
         android:layout_height="@dimen/sw600_450dp"
         android:layout_centerInParent="true"
-        android:background="@drawable/btn_bk_wilhte"
+        android:background="@drawable/btn_bk_orange"
         android:gravity="center">
 
         <LinearLayout
@@ -24,7 +24,7 @@
             android:layout_centerInParent="true"
             android:orientation="horizontal">
 
-            <com.sinoangel.ctrl.parentalcontrol.webview.DisNumberPocker
+            <com.sinoangel.ctrl.parentalcontrol.customview.DisNumberPocker
                 android:id="@+id/np1"
                 android:layout_width="@dimen/sw600_100dp"
                 android:layout_height="@dimen/sw600_280dp" />
@@ -36,7 +36,7 @@
                 android:text=" — "
                 android:textColor="@color/sino_white" />
 
-            <com.sinoangel.ctrl.parentalcontrol.webview.DisNumberPocker
+            <com.sinoangel.ctrl.parentalcontrol.customview.DisNumberPocker
                 android:id="@+id/np2"
                 android:layout_width="@dimen/sw600_80dp"
                 android:layout_height="@dimen/sw600_280dp" />
@@ -48,7 +48,7 @@
                 android:text=" — "
                 android:textColor="@color/sino_white" />
 
-            <com.sinoangel.ctrl.parentalcontrol.webview.DisNumberPocker
+            <com.sinoangel.ctrl.parentalcontrol.customview.DisNumberPocker
                 android:id="@+id/np3"
                 android:layout_width="@dimen/sw600_80dp"
                 android:layout_height="@dimen/sw600_280dp" />

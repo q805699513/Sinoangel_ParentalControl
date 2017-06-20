@@ -3,7 +3,11 @@
     <color name="sino_white">#fff</color>
     <color name="sino_white_11">#11ffffff</color>
     <color name="sino_white_99">#99ffffff</color>
+    <color name="sino_gray">#d7d6d7</color>
     <color name="sino_null">#00000000</color>
+
+    <color name="sino_red">#99ff0000</color>
+    <color name="sino_orange">#fe8e15</color>
 
     <color name="sino_black_22">#88000000</color>
 </resources>

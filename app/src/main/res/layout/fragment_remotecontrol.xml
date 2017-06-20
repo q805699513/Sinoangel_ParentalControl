@@ -1,222 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="@dimen/sw600_25dp">
 
-    <LinearLayout
+    <TableRow android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/ll_box_statistics"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pre_main_menu"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/sw600_15dp">
+
+            <ImageView
+                style="@style/Main_Menu_Icon_ImageView"
+                android:src="@mipmap/ic_main_statistics" />
+
+            <TextView
+                style="@style/Main_Menu_TextView"
+                android:text="@string/main_statistics" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/sino_white_99" />
+
+        <LinearLayout
+            android:id="@+id/ll_box_plan_class"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pre_main_menu"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/sw600_15dp">
+
+            <ImageView
+                style="@style/Main_Menu_Icon_ImageView"
+                android:src="@mipmap/ic_main_plan_class" />
+
+            <TextView
+                style="@style/Main_Menu_TextView"
+                android:text="@string/main_class" />
+        </LinearLayout>
+    </TableRow>
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0.5dp"
+        android:background="@color/sino_white_99" />
+
+    <TableRow android:layout_weight="1">
 
         <LinearLayout
-            android:id="@+id/ll_box_eyeshield"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/sw600_110dp"
+            android:id="@+id/ll_box_store"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@drawable/btn_pre_main_menu"
-            android:orientation="horizontal" />
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/sw600_15dp">
+
+            <ImageView
+                style="@style/Main_Menu_Icon_ImageView"
+                android:src="@mipmap/ic_main_store" />
+
+            <TextView
+                style="@style/Main_Menu_TextView"
+                android:text="@string/main_store" />
+        </LinearLayout>
 
         <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/sino_white_11" />
-
-        <LinearLayout
-            android:id="@+id/ll_box_kidaccount"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/sw600_110dp"
-            android:visibility="gone"
-            android:background="@drawable/btn_pre_main_menu"
-            android:orientation="horizontal" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:visibility="gone"
-            android:background="@color/sino_white_11" />
-
-        <LinearLayout
-            android:id="@+id/ll_box_internet"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/sw600_110dp"
-            android:visibility="gone"
-            android:background="@drawable/btn_pre_main_menu"
-            android:orientation="horizontal" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:visibility="gone"
-            android:background="@color/sino_white_11" />
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/sino_white_99" />
 
         <LinearLayout
             android:id="@+id/ll_box_consumptionplan"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/sw600_110dp"
-            android:background="@drawable/btn_pre_main_menu"
-            android:orientation="horizontal" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/sino_white_11" />
-
-        <LinearLayout
-            android:id="@+id/ll_box_sino_coin"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/sw600_110dp"
-            android:background="@drawable/btn_pre_main_menu"
-            android:orientation="horizontal" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/sino_white_11" />
-
-        <LinearLayout
-            android:id="@+id/ll_box_about"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/sw600_110dp"
-            android:background="@drawable/btn_pre_main_menu"
-            android:orientation="horizontal" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/sino_white_11" />
-
-        <LinearLayout
-            android:id="@+id/ll_box_feedback"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/sw600_110dp"
-            android:background="@drawable/btn_pre_main_menu"
-            android:orientation="horizontal" />
-
-        <!--<View-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="1dp"-->
-        <!--android:background="@color/sino_white_11" />-->
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/sw600_50dp"
-        android:paddingRight="@dimen/sw600_50dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:background="@drawable/btn_pre_main_menu"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/sw600_15dp">
+
+            <ImageView
+                style="@style/Main_Menu_Icon_ImageView"
+                android:src="@mipmap/ic_main_pay" />
+
+            <TextView
+                style="@style/Main_Menu_TextView"
+                android:text="@string/consume_title" />
+        </LinearLayout>
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/sino_white_99" />
+
+    <TableRow android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/ll_box_eyeshield"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pre_main_menu"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/sw600_15dp">
 
             <ImageView
                 style="@style/Main_Menu_Icon_ImageView"
                 android:src="@mipmap/ic_main_eye" />
 
-            <ImageView
-                style="@style/Main_Menu_Icon_ImageView"
-                android:layout_marginTop="1dp"
-                android:src="@mipmap/ic_main_account"
-                android:visibility="gone" />
-
-            <ImageView
-                style="@style/Main_Menu_Icon_ImageView"
-                android:layout_marginTop="1dp"
-                android:src="@mipmap/ic_main_internet"
-                android:visibility="gone" />
-
-            <ImageView
-                style="@style/Main_Menu_Icon_ImageView"
-                android:layout_marginTop="1dp"
-                android:src="@mipmap/ic_main_pay" />
-
-            <ImageView
-                style="@style/Main_Menu_Icon_ImageView"
-                android:layout_marginTop="1dp"
-                android:src="@mipmap/ic_main_about" />
-
-            <ImageView
-                style="@style/Main_Menu_Icon_ImageView"
-                android:layout_marginTop="1dp"
-                android:src="@mipmap/ic_main_about" />
-
-            <ImageView
-                style="@style/Main_Menu_Icon_ImageView"
-                android:layout_marginTop="1dp"
-                android:src="@mipmap/ic_main_feedback" />
+            <TextView
+                style="@style/Main_Menu_TextView"
+                android:text="@string/eyeshield_title" />
         </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/sino_white_99" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/ll_box_sino_coin"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/sw600_10dp"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:background="@drawable/btn_pre_main_menu"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/sw600_15dp">
+
+            <ImageView
+                style="@style/Main_Menu_Icon_ImageView"
+                android:src="@mipmap/ic_main_sino_coin" />
 
             <TextView
-                android:id="@+id/tv_lab_eyeshield"
                 style="@style/Main_Menu_TextView"
-                android:layout_height="@dimen/sw600_110dp"
-                android:paddingLeft="@dimen/sw600_15dp"
-                android:paddingRight="@dimen/sw600_15dp"
-                android:text="@string/eyeshield_title" />
-
-            <TextView
-                android:id="@+id/tv_lab_kidaccount"
-                style="@style/Main_Menu_TextView"
-                android:layout_height="@dimen/sw600_110dp"
-                android:layout_marginTop="1dp"
-                android:paddingLeft="@dimen/sw600_15dp"
-                android:paddingRight="@dimen/sw600_15dp"
-                android:text="@string/kidaccount_title"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/tv_lab_internet"
-                style="@style/Main_Menu_TextView"
-                android:layout_height="@dimen/sw600_110dp"
-                android:layout_marginTop="1dp"
-                android:paddingLeft="@dimen/sw600_15dp"
-                android:paddingRight="@dimen/sw600_15dp"
-                android:text="@string/net_title"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/tv_lab_consumptionplan"
-                style="@style/Main_Menu_TextView"
-                android:layout_height="@dimen/sw600_110dp"
-                android:layout_marginTop="1dp"
-                android:paddingLeft="@dimen/sw600_15dp"
-                android:paddingRight="@dimen/sw600_15dp"
-                android:text="@string/consume_title" />
-
-            <TextView
-                android:id="@+id/tv_lab_sino_coin"
-                style="@style/Main_Menu_TextView"
-                android:layout_height="@dimen/sw600_110dp"
-                android:layout_marginTop="1dp"
-                android:paddingLeft="@dimen/sw600_15dp"
-                android:paddingRight="@dimen/sw600_15dp"
                 android:text="@string/sinocoin_title" />
+        </LinearLayout>
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/sino_white_99" />
+
+    <TableRow android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/ll_box_about"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pre_main_menu"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/sw600_15dp">
+
+            <ImageView
+                style="@style/Main_Menu_Icon_ImageView"
+                android:src="@mipmap/ic_main_about" />
 
             <TextView
                 style="@style/Main_Menu_TextView"
-                android:layout_height="@dimen/sw600_110dp"
-                android:layout_marginTop="1dp"
-                android:paddingLeft="@dimen/sw600_15dp"
-                android:paddingRight="@dimen/sw600_15dp"
                 android:text="@string/abou_title" />
-
-            <TextView
-                style="@style/Main_Menu_TextView"
-                android:layout_height="@dimen/sw600_110dp"
-                android:layout_marginTop="1dp"
-                android:paddingLeft="@dimen/sw600_15dp"
-                android:paddingRight="@dimen/sw600_15dp"
-                android:text="@string/feedback_title" />
         </LinearLayout>
 
-    </LinearLayout>
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/sino_white_99" />
 
+        <LinearLayout
+            android:id="@+id/ll_box_feedback"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_pre_main_menu"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/sw600_15dp">
 
-</RelativeLayout>
+            <ImageView
+                style="@style/Main_Menu_Icon_ImageView"
+                android:src="@mipmap/ic_main_feedback" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/Main_Menu_TextView"
+                android:text="@string/feedback_title" />
+        </LinearLayout>
+    </TableRow>
+</TableLayout>

@@ -14,17 +14,15 @@ import com.sinoangel.ctrl.parentalcontrol.account.parent.ParentAccountActivity;
 import com.sinoangel.ctrl.parentalcontrol.account.parent.bean.TokenBean;
 import com.sinoangel.ctrl.parentalcontrol.base.BaseActivity;
 import com.sinoangel.ctrl.parentalcontrol.base.BaseApplication;
-import com.sinoangel.ctrl.parentalcontrol.curriculumschedule.CurriculumScheduleActivity;
 import com.sinoangel.ctrl.parentalcontrol.utils.BtnAnmiUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.Constant;
 import com.sinoangel.ctrl.parentalcontrol.utils.ImageUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.StaticObjects;
-import com.sinoangel.ctrl.parentalcontrol.webview.ShopActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-    private ImageView iv_head, iv_shop;//头像 商店
-    private View ll_main_actionStatistics, ll_main_curriculum;
+    private ImageView iv_head;//头像
+//    private View ll_main_actionStatistics, ll_main_curriculum;
 
     private BroadcastReceiver headReceiver = new BroadcastReceiver() {
         @Override
@@ -56,10 +54,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
 
     private void initView() {
-        ll_main_actionStatistics = findViewById(R.id.ll_main_actionStatistics);
-        ll_main_curriculum = findViewById(R.id.ll_main_curriculum);
+//        ll_main_actionStatistics = findViewById(R.id.ll_main_actionStatistics);
+//        ll_main_curriculum = findViewById(R.id.ll_main_curriculum);
         iv_head = (ImageView) findViewById(R.id.iv_head);
-        iv_shop = (ImageView) findViewById(R.id.iv_shop);
+//        iv_shop = (ImageView) findViewById(R.id.iv_shop);
 
         addListener();
     }
@@ -67,14 +65,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private void addListener() {
 
         iv_head.setOnClickListener(this);
-        iv_shop.setOnClickListener(this);
-        ll_main_curriculum.setOnClickListener(this);
-        ll_main_actionStatistics.setOnClickListener(this);
+//        iv_shop.setOnClickListener(this);
+//        ll_main_curriculum.setOnClickListener(this);
+//        ll_main_actionStatistics.setOnClickListener(this);
 
-        new BtnAnmiUtils().setBtnAnmi(iv_shop);
+//        new BtnAnmiUtils().setBtnAnmi(iv_shop);
         new BtnAnmiUtils().setBtnAnmi(iv_head);
-        new BtnAnmiUtils().setBtnAnmi(ll_main_curriculum);
-        new BtnAnmiUtils().setBtnAnmi(ll_main_actionStatistics);
+//        new BtnAnmiUtils().setBtnAnmi(ll_main_curriculum);
+//        new BtnAnmiUtils().setBtnAnmi(ll_main_actionStatistics);
     }
 
     @Override
@@ -93,11 +91,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         TokenBean.DataBean uidb = StaticObjects.getUidb();
         //点击动画
         switch (v.getId()) {
-            case R.id.iv_shop:
-                if (uidb != null) {
-                    startActivity(new Intent(this, ShopActivity.class));
-                }
-                break;
+//            case R.id.iv_shop:
+//                if (uidb != null) {
+//                    startActivity(new Intent(this, ShopActivity.class));
+//                }
+//                break;
             case R.id.iv_head:
                 if (uidb != null) {
                     startActivity(new Intent(this, ParentAccountActivity.class));
@@ -105,12 +103,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     startActivity(new Intent(this, LoginActivity.class));
                 }
                 break;
-            case R.id.ll_main_curriculum:
-                startActivity(new Intent(this, CurriculumScheduleActivity.class));
-                break;
-            case R.id.ll_main_actionStatistics:
-                startActivity(new Intent(this, ActionStatisticsActivity.class));
-                break;
+//            case R.id.ll_main_curriculum:
+//                startActivity(new Intent(this, CurriculumScheduleActivity.class));
+//                break;
+//            case R.id.ll_main_actionStatistics:
+//                startActivity(new Intent(this, ActionStatisticsActivity.class));
+//                break;
         }
     }
 

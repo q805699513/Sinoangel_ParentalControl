@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="@dimen/sw600_10dp"
             android:paddingLeft="@dimen/sw600_15dp"
             android:paddingRight="@dimen/sw600_15dp">
 
@@ -74,6 +75,10 @@
             android:layout_marginTop="@dimen/sw600_10dp"
             android:background="@color/sino_white_11" />
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 </ScrollView>

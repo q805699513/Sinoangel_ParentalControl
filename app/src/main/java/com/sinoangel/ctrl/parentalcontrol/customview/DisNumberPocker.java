@@ -1,4 +1,4 @@
-package com.sinoangel.ctrl.parentalcontrol.webview;
+package com.sinoangel.ctrl.parentalcontrol.customview;
 
 import android.content.Context;
 import android.graphics.Color;

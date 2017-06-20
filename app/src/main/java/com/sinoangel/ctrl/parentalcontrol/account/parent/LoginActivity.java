@@ -154,6 +154,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     if (ui.getFlag() == 1) {
                         StaticObjects.setUidb(ui.getData());
                         handler.sendEmptyMessage(RESULT_LOGIN_SUCCESS);
+                    } else if (ui.getFlag() == -1) {
+                        handler.sendEmptyMessage(RESULT_LOGIN_ACCOUNTORPWD_ERROR);
                     } else if (ui.getFlag() == -2) {
                         //邮箱未认证
                         handler.sendEmptyMessage(RESULT_LOGIN_NO_VERIFICATION);

@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -18,6 +17,8 @@ import com.alibaba.fastjson.JSON;
 import com.sinoangel.ctrl.parentalcontrol.R;
 import com.sinoangel.ctrl.parentalcontrol.account.parent.bean.TokenBean;
 import com.sinoangel.ctrl.parentalcontrol.base.BaseActivity;
+import com.sinoangel.ctrl.parentalcontrol.customview.CalendarCard;
+import com.sinoangel.ctrl.parentalcontrol.customview.CustomDate;
 import com.sinoangel.ctrl.parentalcontrol.index.adapter.ActionStatisticsAdapter;
 import com.sinoangel.ctrl.parentalcontrol.index.bean.StatisticsBean;
 import com.sinoangel.ctrl.parentalcontrol.utils.API;
@@ -27,12 +28,8 @@ import com.sinoangel.ctrl.parentalcontrol.utils.DialogUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.HttpUtil;
 import com.sinoangel.ctrl.parentalcontrol.utils.ImageUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.StaticObjects;
-import com.sinoangel.ctrl.parentalcontrol.webview.CalendarCard;
-import com.sinoangel.ctrl.parentalcontrol.webview.CustomDate;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class ActionStatisticsActivity extends BaseActivity implements View.OnClickListener {
@@ -70,6 +67,9 @@ public class ActionStatisticsActivity extends BaseActivity implements View.OnCli
 
         iv_back.setOnClickListener(this);
         iv_setdate.setOnClickListener(this);
+        BtnAnmiUtils btnAnmiUtils = new BtnAnmiUtils();
+        btnAnmiUtils.setBtnAnmi(iv_back);
+        btnAnmiUtils.setBtnAnmi(iv_setdate);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rv_list.setLayoutManager(linearLayoutManager);
@@ -137,11 +137,11 @@ public class ActionStatisticsActivity extends BaseActivity implements View.OnCli
         View contentView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.dialog_date_selection, null);
         dateWindow.setContentView(contentView);
 
-        ImageButton preImgBtn = (ImageButton) contentView.findViewById(R.id.btnPreMonth);
-        ImageButton nextImgBtn = (ImageButton) contentView.findViewById(R.id.btnNextMonth);
+        View preImgBtn = contentView.findViewById(R.id.btnPreMonth);
+        View nextImgBtn = contentView.findViewById(R.id.btnNextMonth);
         final TextView monthText = (TextView) contentView.findViewById(R.id.tvCurrentMonth);
-        TextView okImgBtn = (TextView) contentView.findViewById(R.id.btn_ok);
-        TextView onImgBtn = (TextView) contentView.findViewById(R.id.btn_no);
+        View okImgBtn = contentView.findViewById(R.id.btn_ok);
+        View onImgBtn = contentView.findViewById(R.id.btn_no);
         RelativeLayout rl = (RelativeLayout) contentView.findViewById(R.id.vp_calendar);
 
         ((ImageView) contentView.findViewById(R.id.iv_background)).setImageBitmap(ImageUtils.getBulrBit(getWindow()));

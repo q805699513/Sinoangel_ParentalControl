@@ -8,12 +8,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sinoangel.ctrl.parentalcontrol.R;
+import com.sinoangel.ctrl.parentalcontrol.curriculumschedule.bean.CurriculIndex;
+
+import java.util.List;
 
 /**
  * Created by Z on 2017/6/5.
  */
 
 public class MenuViewHolerAdapter extends RecyclerView.Adapter<MenuViewHolerAdapter.ViewHolder> {
+
+    private List<CurriculIndex.DataBean.NavBean> lcinb;
+
+    public MenuViewHolerAdapter(List<CurriculIndex.DataBean.NavBean> nav) {
+        lcinb = nav;
+        notifyDataSetChanged();
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -23,12 +33,15 @@ public class MenuViewHolerAdapter extends RecyclerView.Adapter<MenuViewHolerAdap
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-//        holder.iv_img
+        CurriculIndex.DataBean.NavBean navBean = lcinb.get(position);
+
+
+//        holder.tv_con.setText(navBean.getNav_name());
     }
 
     @Override
     public int getItemCount() {
-        return 5;
+        return lcinb == null ? 0 : lcinb.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

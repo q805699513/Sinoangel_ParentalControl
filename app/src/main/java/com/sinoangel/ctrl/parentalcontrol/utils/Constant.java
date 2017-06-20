@@ -46,6 +46,7 @@ public class Constant {
     public static final String HEADID = "user_head_id";//头像id
     public static final String WEBBEAN = "webbean";//网址类实体
     public static final String HEAD_FALGE = "head_flage";//头像标记
+    public static final String PAY_MONEY = "pay_money";//支付金额
 
     public static final String GIRL = "0";//女
     public static final String BOY = "1";//男

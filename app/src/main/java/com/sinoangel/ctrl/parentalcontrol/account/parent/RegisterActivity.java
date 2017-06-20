@@ -38,7 +38,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private ImageView iv_head;
     private View iv_back, ll_box_pwd, v_line;
     private EditText et_userName, et_email, et_pwd;
-    private TextView tv_country, btn_register;
+    private TextView tv_country, btn_register, tv_title;
     private RadioGroup rg_sex;
 
     private int headId;//头像id
@@ -108,6 +108,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         if (bundle != null)
             parent = (ParentBean.DataBean.UserBean) bundle.get(Constant.USERBEAN);
         if (parent != null) {
+            tv_title.setText(R.string.parentaccount_update);
             et_userName.setText(parent.getRealname());
             et_email.setText(parent.getEmail());
             et_email.setEnabled(false);
@@ -144,6 +145,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         btn_register = (TextView) findViewById(R.id.btn_register);
         rg_sex = (RadioGroup) findViewById(R.id.rg_sex);
         ll_box_pwd = findViewById(R.id.ll_box_pwd);
+        tv_title = (TextView) findViewById(R.id.tv_title);
 
         et_userName = (EditText) findViewById(R.id.et_userName);
         et_email = (EditText) findViewById(R.id.et_email);

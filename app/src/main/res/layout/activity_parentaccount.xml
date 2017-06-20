@@ -128,7 +128,7 @@
             style="@style/App_Button_TextView"
             android:layout_width="@dimen/sw600_200dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_bk_wilhte"
+            android:background="@drawable/btn_bk_orange"
             android:text="@string/btn_update" />
 
         <TextView
@@ -137,7 +137,7 @@
             android:layout_width="@dimen/sw600_200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/sw600_30dp"
-            android:background="@drawable/btn_bk_wilhte"
+            android:background="@drawable/btn_bk_orange"
             android:text="@string/btn_exit" />
     </LinearLayout>
 

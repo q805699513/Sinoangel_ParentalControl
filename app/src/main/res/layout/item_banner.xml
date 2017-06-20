@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.sinoangel.ctrl.parentalcontrol.webview.RecyclerBanner
+    <com.sinoangel.ctrl.parentalcontrol.customview.RecyclerBanner
         android:id="@+id/rb_banner"
         android:layout_width="match_parent"
         android:layout_height="@dimen/sw600_300dp"

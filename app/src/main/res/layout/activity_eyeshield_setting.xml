@@ -175,7 +175,7 @@
                 android:layout_width="@dimen/sw600_450dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/sw600_25dp"
-                android:background="@drawable/btn_bk_wilhte"
+                android:background="@drawable/btn_bk_orange"
                 android:text="@string/btn_save" />
         </LinearLayout>
     </ScrollView>

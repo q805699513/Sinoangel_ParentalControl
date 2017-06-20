@@ -3,7 +3,8 @@
     <string name="app_name">家长控制</string>
     <string name="main_statistics">行为统计</string>
     <string name="main_control">远程控制</string>
-    <string name="main_class">课程表</string>
+    <string name="main_class">课程计划</string>
+    <string name="main_store">商城</string>
 
     <!--登录注册等-->
     <string name="login_tile">登录</string>
@@ -36,6 +37,7 @@
 
     <!--家长账户-->
     <string name="parentaccount_title">家长账户</string>
+    <string name="parentaccount_update">修改家长账户</string>
 
     <!--儿童账户-->
     <string name="kidaccount_title">儿童账户</string>
@@ -62,6 +64,8 @@
     <!--星币管理-->
     <string name="sinocoin_title">星币管理</string>
     <string name="sinocoin_remain">星币余额:</string>
+    <string name="sinocoin_lab_pay">支付金额:</string>
+    <string name="sinocoin_recharge">充值</string>
 
     <!--关于-->
     <string name="abou_title">关于</string>
@@ -85,7 +89,7 @@
     <string name="btn_save">保存</string>
     <string name="btn_update">修改</string>
     <string name="btn_exit">退出</string>
-    <string name="btn_pay">付款</string>
+    <string name="btn_pay">支付</string>
     <string name="btn_booking">订阅</string>
 
 

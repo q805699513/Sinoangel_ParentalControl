@@ -12,8 +12,6 @@
         android:id="@+id/tv_title"
         style="@style/Main_Title_TextView"
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/sw600_20dp"
-        android:gravity="center"
         android:text="@string/feedback_title" />
 
     <EditText
@@ -28,18 +26,17 @@
         android:padding="@dimen/sw600_25dp"
         android:layout_marginLeft="@dimen/sw600_50dp"
         android:layout_marginRight="@dimen/sw600_50dp"
-        android:background="@drawable/btn_bk_wilhte" />
+        android:background="@drawable/btn_bk_gray" />
 
     <TextView
         android:id="@+id/btn_send"
         style="@style/App_Button_TextView"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/sw600_430dp"
         android:layout_below="@+id/tv_context"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="@dimen/sw600_50dp"
-        android:layout_marginRight="@dimen/sw600_50dp"
-        android:layout_marginTop="@dimen/sw600_25dp"
-        android:background="@drawable/btn_bk_wilhte"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/sw600_50dp"
+        android:background="@drawable/btn_bk_orange"
         android:text="@string/btn_save" />
 
 </RelativeLayout>

@@ -14,15 +14,15 @@
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/sw600_20dp"
         android:gravity="center"
-        android:text="@string/sinocoin_title" />
+        android:text="@string/sinocoin_recharge" />
 
     <LinearLayout
         android:id="@+id/ll1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_title"
-        android:layout_marginTop="@dimen/sw600_50dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/sw600_50dp"
         android:orientation="horizontal">
 
         <RadioGroup
@@ -32,52 +32,75 @@
             android:orientation="vertical">
 
             <RadioButton
-                android:id="@+id/rb_alipay"
-                style="@style/RadioButton_Base"
-                android:layout_width="@dimen/sw600_40dp"
-                android:layout_height="@dimen/sw600_40dp"
-                android:layout_marginTop="@dimen/sw600_30dp"
-                android:background="@drawable/rb_dian" />
-
-            <RadioButton
                 android:id="@+id/rb_wechat"
                 style="@style/RadioButton_Base"
-                android:layout_width="@dimen/sw600_40dp"
-                android:layout_height="@dimen/sw600_40dp"
-                android:layout_marginTop="@dimen/sw600_110dp"
-                android:background="@drawable/rb_dian" />
-        </RadioGroup>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/sw600_10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/iv_alipay"
-                android:layout_width="@dimen/sw600_269dp"
+                android:layout_width="@dimen/sw600_329dp"
                 android:layout_height="@dimen/sw600_100dp"
-                android:src="@mipmap/zhifubao" />
+                android:layout_marginTop="@dimen/sw600_30dp"
+                android:background="@drawable/rb_pay_wx" />
 
-            <ImageView
-                android:id="@+id/iv_wechat"
-                android:layout_width="@dimen/sw600_269dp"
+            <RadioButton
+                android:id="@+id/rb_alipay"
+                style="@style/RadioButton_Base"
+                android:layout_width="@dimen/sw600_329dp"
                 android:layout_height="@dimen/sw600_100dp"
                 android:layout_marginTop="@dimen/sw600_50dp"
-                android:src="@mipmap/weixin" />
-        </LinearLayout>
+                android:background="@drawable/rb_pay_al" />
+
+            <RadioButton
+                android:id="@+id/rb_paypal"
+                style="@style/RadioButton_Base"
+                android:layout_width="@dimen/sw600_329dp"
+                android:layout_height="@dimen/sw600_100dp"
+                android:layout_marginTop="@dimen/sw600_50dp"
+                android:background="@drawable/rb_pay_pp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1"
+        android:layout_marginTop="@dimen/sw600_60dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextView_Base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sinocoin_lab_pay"
+            android:textSize="@dimen/sw600_30sp" />
+
+        <TextView
+            android:id="@+id/tv_jine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sw600_20dp"
+            android:text="0"
+            android:textColor="@color/sino_orange"
+            android:textSize="@dimen/sw600_30sp" />
+
+        <TextView
+            style="@style/TextView_Base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/sw600_20dp"
+            android:text="USD"
+            android:textSize="@dimen/sw600_30sp" />
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/btn_pay"
         style="@style/App_Button_TextView"
         android:layout_width="@dimen/sw600_450dp"
-        android:layout_below="@+id/ll1"
+        android:layout_below="@+id/ll2"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/sw600_25dp"
-        android:background="@drawable/btn_bk_wilhte"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/sw600_120dp"
+        android:background="@drawable/btn_bk_orange"
         android:text="@string/btn_pay" />
 
 </RelativeLayout>

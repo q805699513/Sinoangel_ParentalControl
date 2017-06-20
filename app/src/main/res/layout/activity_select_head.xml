@@ -127,6 +127,6 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="@dimen/sw600_45dp"
-        android:background="@drawable/btn_bk_wilhte"
+        android:background="@drawable/btn_bk_orange"
         android:text="@string/btn_ok" />
 </RelativeLayout>

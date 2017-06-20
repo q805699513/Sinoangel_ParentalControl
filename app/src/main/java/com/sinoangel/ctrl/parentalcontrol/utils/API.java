@@ -11,10 +11,14 @@ import java.util.Set;
  */
 
 public class API {
+//    public static final String API = "http://global.api.sinoangel.cn/";
     public static final String API = "http://cn.api.sinoangel.cn/";
-    public static final String API2 = "http://shop.sinoangel.cn/";//商店
+//    public static final String API2 = "http://shop.sinoangel.cn/";//商店
 
-    public static final String NET_USER_STORE = API2 + "home";//商店 store
+    public static final String NET_USER_STORE = "http://shop.sinoangel.cn/home";//商店
+
+//    public static final String NET_USER_STORE = "http://api2.sinoangel.cn/store";//商店 store
+//    public static final String NET_USER_STORE = "http://global.api2.sinoangel.cn/store";//商店 store
 
     public static final String NET_USER_LOGIN = API + "StoreUsers/login";//登录
     public static final String NET_USER_REGISTER = API + "StoreUsers/register";//注册

@@ -1,9 +1,8 @@
-package com.sinoangel.ctrl.parentalcontrol.webview;
+package com.sinoangel.ctrl.parentalcontrol.customview;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;

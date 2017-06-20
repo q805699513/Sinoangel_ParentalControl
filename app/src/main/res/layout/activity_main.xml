@@ -5,138 +5,26 @@
     android:background="@mipmap/main_bg"
     android:fitsSystemWindows="false">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="@dimen/sw600_80dp"
+        android:layout_height="@dimen/sw600_80dp"
+        android:layout_marginLeft="@dimen/sw600_20dp"
+        android:layout_marginTop="@dimen/sw600_50dp"
+        android:src="@mipmap/icon_parent_1" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Main_Title_TextView"
+        android:layout_width="match_parent"
+        android:text="@string/app_name" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.sinoangel.ctrl.parentalcontrol.index.fragment.RemoteControlFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
-
-        <ImageView
-            android:layout_width="@dimen/sw600_260dp"
-            android:layout_height="@dimen/sw600_129dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:src="@mipmap/control_bg" />
-
-        <LinearLayout
-            android:id="@+id/ll_top"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:paddingLeft="@dimen/sw600_10dp"
-            android:paddingRight="@dimen/sw600_10dp"
-            android:paddingTop="@dimen/sw600_30dp">
-
-            <com.sinoangel.ctrl.parentalcontrol.customview.CircleImageView
-                android:id="@+id/iv_head"
-                android:layout_width="46dp"
-                android:layout_height="@dimen/sw600_80dp"
-                android:layout_marginLeft="@dimen/sw600_20dp"
-                android:src="@mipmap/icon_parent_1" />
-
-            <TextView
-                android:id="@+id/tv_title"
-                style="@style/Main_Title_TextView"
-                android:layout_width="0dp"
-                android:layout_weight="1" />
-
-            <ImageView
-                android:id="@+id/iv_shop"
-                android:layout_width="@dimen/sw600_80dp"
-                android:layout_height="@dimen/sw600_80dp"
-                android:padding="@dimen/sw600_15dp"
-                android:src="@mipmap/store" />
-        </LinearLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/sw600_665dp"
-            android:layout_marginTop="@dimen/sw600_40dp"
-            android:overScrollMode="never"
-            android:scrollbars="none"
-            android:layout_below="@+id/ll_top">
-
-            <fragment
-                android:id="@+id/fragment"
-                android:name="com.sinoangel.ctrl.parentalcontrol.index.fragment.RemoteControlFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </ScrollView>
-
-        <LinearLayout
-            android:id="@+id/ll_main_menu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/sw600_10dp"
-            android:paddingTop="@dimen/sw600_10dp">
-
-            <LinearLayout
-                android:id="@+id/ll_main_actionStatistics"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="@dimen/sw600_50dp"
-                    android:layout_height="@dimen/sw600_50dp"
-                    android:src="@mipmap/rb_statistics" />
-
-                <TextView
-
-                    style="@style/TextView_Base"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/main_statistics" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="@dimen/sw600_50dp"
-                    android:layout_height="@dimen/sw600_50dp"
-                    android:src="@mipmap/rb_control" />
-
-                <TextView
-                    android:id="@+id/rb_main_actionStatistics"
-                    style="@style/TextView_Base"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/main_control" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/ll_main_curriculum"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="@dimen/sw600_50dp"
-                    android:layout_height="@dimen/sw600_50dp"
-                    android:src="@mipmap/rb_cion" />
-
-                <TextView
-                    style="@style/TextView_Base"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/main_class" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </RelativeLayout>
-
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="@dimen/sw600_15dp" />
 
 </RelativeLayout>

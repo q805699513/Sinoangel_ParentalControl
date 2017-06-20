@@ -1,6 +1,6 @@
-package com.sinoangel.ctrl.parentalcontrol.curriculumschedule;
+package com.sinoangel.ctrl.parentalcontrol.curriculumschedule.bean;
 
-import com.sinoangel.ctrl.parentalcontrol.webview.RecyclerBanner;
+import com.sinoangel.ctrl.parentalcontrol.customview.RecyclerBanner;
 
 /**
  * Created by Z on 2017/6/5.

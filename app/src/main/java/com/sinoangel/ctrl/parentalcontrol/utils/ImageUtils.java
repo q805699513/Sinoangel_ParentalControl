@@ -2,11 +2,7 @@ package com.sinoangel.ctrl.parentalcontrol.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
-import android.graphics.Xfermode;
 import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
@@ -14,12 +10,11 @@ import android.renderscript.ScriptIntrinsicBlur;
 import android.renderscript.Type;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
-import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.sinoangel.ctrl.parentalcontrol.R;
 import com.sinoangel.ctrl.parentalcontrol.base.BaseApplication;
 
@@ -32,7 +27,8 @@ public class ImageUtils {
     public static void showImgUrl(String url, ImageView iv) {
         if (TextUtils.isEmpty(url))
             return;
-        Glide.with(BaseApplication.getInstance()).load(url).dontAnimate().into(iv);
+        ImageLoader.getInstance().displayImage(url,iv);
+//        Glide.with(BaseApplication.getInstance()).load(url).dontAnimate().into(iv);
     }
 
     public static Bitmap getBulrBit(Window window) {

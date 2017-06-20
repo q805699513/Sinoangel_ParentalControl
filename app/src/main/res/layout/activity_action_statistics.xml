@@ -12,19 +12,16 @@
         android:id="@+id/tv_title"
         style="@style/Main_Title_TextView"
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/sw600_20dp"
-        android:gravity="center"
         android:text="@string/actionstatistics_title" />
 
     <ImageView
         android:id="@+id/iv_setdate"
         android:layout_width="@dimen/sw600_80dp"
-        android:layout_alignParentRight="true"
         android:layout_height="@dimen/sw600_80dp"
-        android:padding="@dimen/sw600_15dp"
-        android:layout_marginTop="@dimen/sw600_20dp"
+        android:layout_alignParentRight="true"
         android:layout_marginLeft="@dimen/sw600_15dp"
-        android:src="@mipmap/edit" />
+        android:layout_marginTop="@dimen/sw600_40dp"
+        android:src="@mipmap/edit_data" />
 
 
     <android.support.v7.widget.RecyclerView

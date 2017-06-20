@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
 import android.view.View;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
@@ -16,6 +14,7 @@ import com.sinoangel.ctrl.parentalcontrol.index.bean.LimitBean;
 import com.sinoangel.ctrl.parentalcontrol.utils.API;
 import com.sinoangel.ctrl.parentalcontrol.utils.AppUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.BtnAnmiUtils;
+import com.sinoangel.ctrl.parentalcontrol.utils.Constant;
 import com.sinoangel.ctrl.parentalcontrol.utils.DialogUtils;
 import com.sinoangel.ctrl.parentalcontrol.utils.HttpUtil;
 
@@ -54,7 +53,12 @@ public class SinoCoinActivity extends BaseActivity implements View.OnClickListen
         tv_yue = (TextView) findViewById(R.id.tv_yue);
 
 
-        iv_back.setOnClickListener(this);
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         btn_coin1.setOnClickListener(this);
         btn_coin2.setOnClickListener(this);
         btn_coin3.setOnClickListener(this);
@@ -103,28 +107,21 @@ public class SinoCoinActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        Intent intent;
+        Intent intent = new Intent(SinoCoinActivity.this, PayActivity.class);
         switch (v.getId()) {
-
-            case R.id.iv_back:
-                finish();
-                break;
             case R.id.btn_coin1:
-                intent = new Intent(SinoCoinActivity.this, PayActivity.class);
-                startActivity(intent);
+                intent.putExtra(Constant.PAY_MONEY, 100);
                 break;
             case R.id.btn_coin2:
-                intent = new Intent(SinoCoinActivity.this, PayActivity.class);
-                startActivity(intent);
+                intent.putExtra(Constant.PAY_MONEY, 300);
                 break;
             case R.id.btn_coin3:
-                intent = new Intent(SinoCoinActivity.this, PayActivity.class);
-                startActivity(intent);
+                intent.putExtra(Constant.PAY_MONEY, 600);
                 break;
             case R.id.btn_coin4:
-                intent = new Intent(SinoCoinActivity.this, PayActivity.class);
-                startActivity(intent);
+                intent.putExtra(Constant.PAY_MONEY, 1000);
                 break;
         }
+        startActivity(intent);
     }
 }

@@ -6,19 +6,18 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.sinoangel.ctrl.parentalcontrol.R;
+import com.sinoangel.ctrl.parentalcontrol.curriculumschedule.CurriculumScheduleActivity;
 import com.sinoangel.ctrl.parentalcontrol.index.AboutActivity;
+import com.sinoangel.ctrl.parentalcontrol.index.ActionStatisticsActivity;
 import com.sinoangel.ctrl.parentalcontrol.index.ConsumeProtectionActivity;
 import com.sinoangel.ctrl.parentalcontrol.index.EyeshieldSettingActivity;
 import com.sinoangel.ctrl.parentalcontrol.index.FeedbackActivity;
-import com.sinoangel.ctrl.parentalcontrol.index.InternetManagerActivity;
-import com.sinoangel.ctrl.parentalcontrol.index.KidAccountActivity;
 import com.sinoangel.ctrl.parentalcontrol.index.SinoCoinActivity;
-import com.sinoangel.ctrl.parentalcontrol.utils.BtnAnmiUtils;
+import com.sinoangel.ctrl.parentalcontrol.webview.ShopActivity;
 
 /**
  * Created by Z on 2017/5/16.
@@ -28,7 +27,8 @@ public class RemoteControlFragment extends Fragment implements View.OnClickListe
 
     private Context mContext;
 
-    private View ll_box_eyeshield, ll_box_kidaccount, ll_box_internet, ll_box_consumptionplan,ll_box_sino_coin, ll_box_about, ll_box_feedback;
+    private View ll_box_eyeshield, ll_box_consumptionplan, ll_box_sino_coin, ll_box_about, ll_box_feedback,
+            ll_box_plan_class, ll_box_statistics, ll_box_store;
 
     @Nullable
     @Override
@@ -36,17 +36,19 @@ public class RemoteControlFragment extends Fragment implements View.OnClickListe
 
         View view = inflater.inflate(R.layout.fragment_remotecontrol, null);
 
+        ll_box_statistics = view.findViewById(R.id.ll_box_statistics);
+        ll_box_plan_class = view.findViewById(R.id.ll_box_plan_class);
+        ll_box_store = view.findViewById(R.id.ll_box_store);
         ll_box_eyeshield = view.findViewById(R.id.ll_box_eyeshield);
-        ll_box_kidaccount = view.findViewById(R.id.ll_box_kidaccount);
-        ll_box_internet = view.findViewById(R.id.ll_box_internet);
         ll_box_consumptionplan = view.findViewById(R.id.ll_box_consumptionplan);
-        ll_box_sino_coin= view.findViewById(R.id.ll_box_sino_coin);
+        ll_box_sino_coin = view.findViewById(R.id.ll_box_sino_coin);
         ll_box_about = view.findViewById(R.id.ll_box_about);
         ll_box_feedback = view.findViewById(R.id.ll_box_feedback);
 
+        ll_box_statistics.setOnClickListener(this);
+        ll_box_plan_class.setOnClickListener(this);
+        ll_box_store.setOnClickListener(this);
         ll_box_eyeshield.setOnClickListener(this);
-        ll_box_kidaccount.setOnClickListener(this);
-        ll_box_internet.setOnClickListener(this);
         ll_box_consumptionplan.setOnClickListener(this);
         ll_box_sino_coin.setOnClickListener(this);
         ll_box_about.setOnClickListener(this);
@@ -64,14 +66,17 @@ public class RemoteControlFragment extends Fragment implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.ll_box_statistics:
+                startActivity(new Intent(mContext, ActionStatisticsActivity.class));
+                break;
+            case R.id.ll_box_plan_class:
+                startActivity(new Intent(mContext, CurriculumScheduleActivity.class));
+                break;
+            case R.id.ll_box_store:
+                startActivity(new Intent(mContext, ShopActivity.class));
+                break;
             case R.id.ll_box_eyeshield:
                 startActivity(new Intent(mContext, EyeshieldSettingActivity.class));
-                break;
-            case R.id.ll_box_kidaccount:
-                startActivity(new Intent(mContext, KidAccountActivity.class));
-                break;
-            case R.id.ll_box_internet:
-                startActivity(new Intent(mContext, InternetManagerActivity.class));
                 break;
             case R.id.ll_box_consumptionplan:
                 startActivity(new Intent(mContext, ConsumeProtectionActivity.class));
